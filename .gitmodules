@@ -1,3 +1,9 @@
 [submodule "Semester04/AI-L"]
 	path = Semester04/AI-L
 	url = https://github.com/MuhammadAbuBakarMemon/AI-L.git
+[submodule "Semester3/DSA-L"]
+	path = Semester3/DSA-L
+	url = https://github.com/MuhammadAbuBakarMemon/DSA-L.git
+[submodule "Semester3/LA/BonusAssignment"]
+	path = Semester3/LA/BonusAssignment
+	url = https://github.com/MuhammadAbuBakarMemon/MT1004-LinearAlgebra-SemesterProject.git

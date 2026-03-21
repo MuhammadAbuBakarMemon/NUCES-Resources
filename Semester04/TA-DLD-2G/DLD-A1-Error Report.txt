@@ -1,0 +1,311 @@
+25K0663
+Q6
+part a wrong
+Q10
+part a wrong
+part c wrong
+Q14
+part d In-correct
+Q15 partially incorrect
+
+25K-3054
+Q10
+part a wrong
+Q12
+all parts incorrect
+Q14
+part c incorrect
+Q19
+completely incorrect as question asked to Determine which of the following even parity codes are in error. not assign a parity bit to them
+
+25K-0943
+Q18
+part d is incorrect
+
+25K-0883
+Q12
+part c incorrect
+
+
+25K-0810
+Q6
+part a wrong
+Q13
+part b in correct
+
+25K-0807
+Q15
+didn't answer the latter half
+Q20
+part c incorrect
+
+25K-0742
+Q8
+part c incorrect
+Q10
+part a in correct
+
+
+25K-0803
+Q5
+part b incorrect
+Q18
+part d incorrect
+Q15
+didn't mention the difference between binary and bcd
+
+25K-0724 
+(kindly improve handwriting and take pictures in illuminated conditions, as in  they are comfortable for me to read and check)
+Q6 
+part a incorrect 
+part b incorrect 
+Q9 
+part c incorrect 
+Q10
+part c incorrect
+Q14 
+part a incorrect
+part b incorrect
+Q15
+didn't mention the difference between binary and bcd
+Q20 
+part c incorrect
+
+25K-0692
+Q15
+didn't mention the difference between binary and bcd
+Q20
+part a incorrect
+
+25K-0784
+Q7 
+part c incorrect
+Q10
+part a incorrect
+
+25K-0834
+Q2 
+incorrect
+Q3
+decimal part working done but answer not written 
+
+25K-0691
+Q10 
+part a incorrect
+
+25K-0684
+Q10 
+part a incorrect 
+Q18
+part a, b and c no conversion shown (which questions asks for explicitly) only answers given 
+part d incorrect 
+
+25K-0668
+Q14 
+part d not attempted 
+Q18
+part b incorrect 
+
+25K-0653
+Q6
+part b and c are incorrect
+Q14
+part d not attempted 
+Q18
+part c at least show some working if you're gonna copy, the question asked for a conversion to BCD and then add the numbers, 
+part d not attempted 
+Q19
+part d incorrect
+Q20
+part d incorrect
+
+25K-0638
+Q6
+part c not attempted 
+Q7
+part c not attempted 
+Q14
+part d ignore 9th bit 
+Q19
+part b incorrect 
+
+25K-0515
+Q9
+part a incorrect 
+Q15
+didn't mention the difference between binary and bcd
+Q20
+b, c and d are incorrect 
+
+25K-0522
+Q8 
+part b incorrect
+Q9 
+part b incorrect
+Q10
+part b incorrect
+Q14
+part d incorrect 
+Q18
+part b and c not attempted 
+part d incorrect
+Q20
+part c incorrect
+
+25K-0543
+Q12
+part c incorrect
+kindly submit in portrait mode from next time onwards 
+
+25K-0559
+Q8
+part b incorrect
+Q9
+part b incorrect
+Q15
+didn't mention the difference between binary and bcd
+Q16
+1 example is not worth 5 marks the question explicitly states applications
+Q18
+part c is incorrect
+Q20 
+part c incorrect
+
+25K-0561
+Q15
+didn't mention the difference between binary and bcd
+Q18 
+part c incorrect 
+Q20
+part c incorrect 
+
+25K-0572
+Q6
+a and b the question asked for the octal representation not binary 
+c part not done 
+Q7
+need the hexa decimal representation
+Q8
+question asks for 8-bit sign magnitude number 
+Q10
+part c incorrect
+Q11
+part a incorrect
+Q20
+part c incorrect
+
+25K-0609
+Q12
+part c incorrect
+Q15
+didn't mention the difference between binary and bcd
+Q20
+part b, c and d incorrect
+
+25K-0710
+Q3 
+did not attempt 
+Q4
+part a incorrect
+Q6
+part a incorrect
+Q10
+part b incorrect
+
+25K-0722
+Q19 
+part b incorrect
+
+25k-0790
+Q1 
+answer written incorrectly partial marking 4/5 awarded
+Q2
+answer written incorrectly partial marking 4/5 awarded
+Q4
+part b incorrect
+Q8
+part c did not attempt
+Q10
+part a incorrect
+Q18
+conversion of numbers is missing not shown
+part d incorrect
+
+25K-0863
+Q5 
+completely incorrect 
+Q6
+part a incorrect
+Q7
+part c incorrect
+Q8
+part a incorrect
+Q11
+part a and b incorrect
+Q12
+part a and c incorrect
+Q13
+part a and c incorrect
+
+25K-0891
+Q8
+part a and c incorrect
+
+25K-0948
+Q8
+part a incorrect
+Q9
+part a incorrect
+Q10
+part a incorrect
+Q14
+part a incorrect
+Q18
+part c and d at least show some working if you're gonna copy, the question asked for a conversion to BCD and then add the numbers, 
+
+25K-0957
+Q1
+incorrect
+Q5
+part a incorrect
+Q6
+part b incorrect
+Q8
+part a and c incorrect
+Q11
+part a and c incorrect
+
+25K-0980
+Q8
+part c incorrect
+Q10
+part a incorrect
+Q15
+bcd is not a phenomena it's a number system, haven't penalized any marks for this though just wanted to let you know to take care of such terminologies 
+Q18
+part b and c least show some working if you're gonna copy, the question asked for a conversion to BCD and then add the numbers, 
+part d in correct
+
+25K-0554
+Q5
+part a incorrect
+Q6
+part a incorrect
+Q15
+didn't mention the difference between binary and bcd
+Q19
+part d incorrect
+
+25K
+Q5
+part b incorrect 
+Q7 
+part a incorrect 
+part c missing
+Q15
+didn't mention the difference between binary and bcd
+Q19 
+part b, c, and d incorrect 
+Q20
+part c and d incorrect 
+

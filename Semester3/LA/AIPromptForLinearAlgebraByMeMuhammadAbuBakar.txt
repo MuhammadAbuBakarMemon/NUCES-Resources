@@ -1,0 +1,17 @@
+generate me a prompt for notebook lm 
+for this 
+listen take your time and review every minute detail I am studying for my finals, I can not mess up I need both simple examples and examples from the book to help me with this topic.
+I have uploaded and selected 
+lecture slides for ex 6.2 [Orthogonal and orthonormal bases] 
+the full book text book
+and the course content pdf that outlines the questions from the book that are included in my course outline
+please teach me everything in this from both the book that I have attached and these slides use them and teach me everything and every little concept in the simplest of terms as the best teacher in this world would
+I need full so i need to know every conceot I have uploaded and selected the resources on notebook lm now I just need the best prompt available
+I need you to make it think like a teacher that is the best teacher in the world that is teaching a person with decent level of understanding 
+but you know what they say the more one knows is when they realise the lesser they know 
+because the more knowledge you have the more you realise that there are thing out there that you do not know so 
+although I want explanations in simpler terms as I am short on time 
+but I don't want it to think that I am a person that is the dumbest person  
+it is a big book of around 611 pages I want notebook lm to take in everything tokenize every synmbol from the text book go through every work ever paragraph every concept in it and then teach me 
+it just takes 1 minute and generates teh topic'c explanation make him take time and actuallly read stuff in the book
+I can give it unlimited time but can not compromise on the quality 

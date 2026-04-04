@@ -1,0 +1,81 @@
+cells:
+  - kind: 2
+    value: SELECT * FROM HR.EMPLOYEES;
+    languageId: oracle-sql
+  - kind: 1
+    value: "The create command in SQL is used to create database and database
+      objects such as tables, indexes, views, stored, procedures, functions and
+      triggers \r
+
+      \r
+
+      When we define a table we tell our DBMS regarding these \r
+
+      - Conlumn Name (Fields/Attributes)\r
+
+      - Data Type (the type of data stored)\r
+
+      - Constraints (if any)\r
+
+      \r
+
+      2 Create Statements that are mainly available in SQL\r
+
+      \r
+
+      1. CREATE DATABASE\r
+
+      Example Syntax:\r
+
+      CREATE DATABASE database_name;\r
+
+      \r
+
+      2. CREATE TABLE\r
+
+      Example Syntax:\r
+
+      CREATE TABLE table_name(\r
+
+      column1 datatype(size),\r
+
+      column2 datatype(size),\r
+
+      column3 datatype(size)\r
+
+      );"
+    languageId: markdown
+  - kind: 2
+    value: "CREATE TABLE Students(\r
+
+      \    Student_ID INT,\r
+
+      \    Student_Name VARCHAR(50),\r
+
+      \    Student_Age INT,\r
+
+      \    Enrollment_Date DATE,\r
+
+      \    Student_Email NVARCHAR2(100)\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "CREATE MATERIALIZED VIEW dept_salary_mv\r
+
+      BUILD IMMEDIATE -- BUILD MODE \r
+
+      REFRESH COMPLETE ON DEMAND -- REFRESH TYPE + REFRESH MODE \r
+
+      AS\r
+
+      SELECT d.department_name, SUM(e.salary) AS total_salary_expense \r
+
+      FROM EMPLOYEES e\r
+
+      JOIN DEPARTMENTS d\r
+
+      \    ON d.DEPARTMENT_ID = e.DEPARTMENT_ID\r
+
+      GROUP BY d.DEPARTMENT_NAME"
+    languageId: oracle-sql

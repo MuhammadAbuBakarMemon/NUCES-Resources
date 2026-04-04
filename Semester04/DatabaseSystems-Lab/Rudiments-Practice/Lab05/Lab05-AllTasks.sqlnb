@@ -1,0 +1,302 @@
+cells:
+  - kind: 1
+    value: "Company Workforce Analysis SystemYou are hired as a junior database
+      developer for a growing software company. The company\r
+
+      maintains an Employees table containing the following columns: emp_id,
+      name, salary,\r
+
+      department_id, commission, hire_date, and profile (CLOB), along with a
+      Departments table\r
+
+      containing department_id and department_name. Management wants a detailed
+      workforce\r
+
+      analysis report to support strategic decisions.\r
+
+      Your task is to write SQL queries to generate the required information.
+      First, determine the total\r
+
+      number of employees in the company and also identify how many employees
+      are currently\r
+
+      receiving commission (remember that some commission values may be NULL).
+      Next, calculate\r
+
+      the total salary expense of the entire company and also compute the total
+      salary paid by each\r
+
+      department. Display the department-wise totals sorted from highest to
+      lowest salary expenditure.\r
+
+      Management also wants to analyze salary distribution, so calculate the
+      highest salary, lowest\r
+
+      salary, and the salary difference across the company. Then determine the
+      average salary of the\r
+
+      company and identify employees who earn more than this average.
+      Additionally, find how many\r
+
+      distinct salary values exist in the organization to evaluate salary
+      diversity.\r
+
+      For departmental performance review, generate a report showing the number
+      of employees and\r
+
+      average salary in each department. Only include departments that have more
+      than five employees\r
+
+      and whose total salary exceeds 200000. Sort the results based on employee
+      count in descending\r
+
+      order.\r
+
+      The HR department wants to identify departments where the average salary
+      is higher than the\r
+
+      overall company average, so write a query using subqueries to accomplish
+      this. Also, list\r
+
+      employees who are earning the maximum salary in the company.\r
+
+      Because some employees have not yet been assigned commission, generate a
+      list of employees\r
+
+      whose commission is NULL. At the same time, retrieve employees whose
+      profile (CLOB\r
+
+      column) is not NULL to ensure profile documentation is complete.\r
+
+      Finally, for reporting purposes, produce a sorted list of employees
+      arranged by department in\r
+
+      ascending order and salary in descending order within each department.
+      Ensure all queries\r
+
+      correctly handle NULL values, use appropriate aggregate functions, apply
+      GROUP BY and\r
+
+      HAVING clauses where required, and implement subqueries wherever
+      necessary."
+    languageId: markdown
+  - kind: 2
+    value: "SELECT COUNT(*) AS TOTAL_EMP \r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r\nFROM HR.EMPLOYEES;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT COUNT(COMMISSION_PCT) AS EMPLOYEES_RECEIVING_COMISSION\r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT SUM(SALARY) AS TOTAL_SALARY_EXPENSE\r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT DEPARTMENT_ID, SUM(SALARY) AS TOTAL_DEPT_SAL \r
+
+      FROM HR. EMPLOYEES\r
+
+      GROUP BY DEPARTMENT_ID\r
+
+      ORDER BY TOTAL_DEPT_SAL DESC;"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM HR.DEPARTMENTS;
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT d.DEPARTMENT_NAME, SUM(e.SALARY) AS TOT_DEPT_SAL\r
+
+      FROM HR.EMPLOYEES e\r
+
+      JOIN HR.DEPARTMENTS d\r
+
+      ON e.DEPARTMENT_ID = d.DEPARTMENT_ID\r
+
+      GROUP BY d.DEPARTMENT_NAME\r
+
+      ORDER BY TOT_DEPT_SAL DESC;\r\n"
+    languageId: oracle-sql
+  - kind: 1
+    value: "compute the total salary paid by each\r
+
+      department. Display the department-wise totals sorted from highest to
+      lowest salary expenditure."
+    languageId: markdown
+  - kind: 2
+    value: "SELECT d.DEPARTMENT_NAME, SUM(e.SALARY) AS TOT_DEPT_SAL\r
+
+      FROM HR.EMPLOYEES e\r
+
+      JOIN HR.DEPARTMENTS d\r
+
+      ON d.DEPARTMENT_ID = e.DEPARTMENT_ID\r
+
+      GROUP BY d.DEPARTMENT_NAME\r
+
+      ORDER BY TOT_DEPT_SAL DESC;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT MAX(SALARY) AS H_SAL, MIN(SALARY) AS M_SAL, (MAX(SALARY) -
+      MIN(SALARY)) AS SAL_DIFF\r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT ROUND( AVG(SALARY) AS COMP_AVG_SAL, 2 )\r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT ROUND(AVG(SALARY), 2) AS COMP_AVG_SAL\r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * \r
+
+      FROM HR.EMPLOYEES \r
+
+      WHERE SALARY > (\r
+
+      \    SELECT AVG(SALARY) \r
+
+      \    FROM HR.EMPLOYEES\r
+
+      \r
+
+      )\r
+
+      ORDER BY SALARY;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT COUNT(DISTINCT SALARY) AS DIS_SAL_COUNT\r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 1
+    value: "For departmental performance review, generate a report showing the
+      number of employees and\r
+
+      average salary in each department. Only include departments that have more
+      than five employees\r
+
+      and whose total salary exceeds 200000. Sort the results based on employee
+      count in descending\r
+
+      order."
+    languageId: markdown
+  - kind: 2
+    value: "SELECT d.DEPARTMENT_NAME, COUNT(*) AS NUM_OF_EMP, ROUND(AVG(SALARY), 2)
+      AS AVG_SAL\r
+
+      FROM HR.EMPLOYEES e\r
+
+      JOIN HR.DEPARTMENTS d\r
+
+      ON d.DEPARTMENT_ID = e.DEPARTMENT_ID\r
+
+      GROUP BY d.DEPARTMENT_NAME\r
+
+      HAVING COUNT(EMPLOYEE_ID) > 5 AND (SUM(SALARY)) > 200000\r
+
+      ORDER BY NUM_OF_EMP DESC;"
+    languageId: oracle-sql
+  - kind: 1
+    value: "The HR department wants to identify departments where the average salary
+      is higher than the\r
+
+      overall company average, so write a query using subqueries to accomplish
+      this. Also, list\r
+
+      employees who are earning the maximum salary in the company."
+    languageId: markdown
+  - kind: 2
+    value: "SELECT d.DEPARTMENT_NAME, ROUND(AVG(e.SALARY), 2) AS AVG_DEPT_SAL\r
+
+      FROM HR.EMPLOYEES e\r
+
+      JOIN HR.DEPARTMENTS d\r
+
+      ON e.DEPARTMENT_ID = d.DEPARTMENT_ID \r
+
+      GROUP BY d.DEPARTMENT_NAME\r
+
+      HAVING AVG(e.SALARY) > (\r
+
+      \    SELECT AVG(SALARY) AS COMP_AVG\r
+
+      \    FROM HR.EMPLOYEES\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY\r
+
+      FROM HR.EMPLOYEES \r
+
+      WHERE SALARY = (\r
+
+      \r
+
+      \    SELECT MAX(SALARY) \r
+
+      \    FROM HR.EMPLOYEES\r
+
+      \r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, COMMISSION_PCT\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE COMMISSION_PCT IS NULL; "
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, PROFILE\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE PROFLE IS NOT NULL;"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Finally, for reporting purposes, produce a sorted list of employees
+      arranged by department in\r
+
+      ascending order and salary in descending order within each department.
+      Ensure all queries\r
+
+      correctly handle NULL values, use appropriate aggregate functions, apply
+      GROUP BY and\r
+
+      HAVING clauses where required, and implement subqueries wherever
+      necessary."
+    languageId: markdown
+  - kind: 2
+    value: "SELECT e.EMPLOYEE_ID, e.FIRST_NAME, e.LAST_NAME, d.DEPARTMENT_NAME,
+      e.SALARY\r
+
+      FROM HR.EMPLOYEES e\r
+
+      LEFT JOIN HR.DEPARTMENTS d\r
+
+      ON e.DEPARTMENT_ID = d.DEPARTMENT_ID\r
+
+      ORDER BY e.SALARY DESC, d.DEPARTMENT_NAME;\r
+
+      \r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql

@@ -1,0 +1,221 @@
+cells:
+  - kind: 1
+    value: "3. The HR team needs reports based on salary and hiring dates. Write
+      queries to:\r
+
+      o Display employees whose salary is between 3000 and 8000.\r
+
+      o Display employees whose employee_id is between 105 and 120.\r
+
+      o Display employees hired between 01-JAN-2005 and 31-DEC-2007.\r
+
+      o Display employees whose salary is not between 5000 and 9000.\r
+
+      o Display employees hired between 01-JAN-2001 and 01-JAN-2003.\r
+
+      \r
+
+      4. The company wants to search employees based on name patterns. Write
+      queries to:\r
+
+      o Display employees whose first name starts with 'El'.\r
+
+      o Display employees whose last name ends with 'n'.\r
+
+      o Display employees whose first name contains 'an'.\r
+
+      o Display employees whose first name has 'r' as the second letter.\r
+
+      o Display employees whose first name starts with 'A' and contains at least
+      three \r
+
+      characters.\r
+
+      \r
+
+      5. Using the IN operator, write queries to:\r
+
+      o Display employees working in departments 10, 20, or 30.\r
+
+      o Display employees whose job_id is 'IT_PROG', 'SA_REP', or 'HR_REP'.\r
+
+      o Display employees whose manager_id is 100, 101, or 102.\r
+
+      o Display employees whose salary is 2400, 4800, or 8000.\r
+
+      o Display employees whose department_id is not in 50, 60, or 90.\r
+
+      \r
+
+      6. The HR manager wants to understand operator precedence in SQL. Write a
+      query to \r
+
+      display employees where salary is greater than 5000 OR department_id is 50
+      AND job_id \r
+
+      is 'IT_PROG'. Then rewrite the same query using brackets so that the OR
+      condition is \r
+
+      executed first.\r
+
+      \r
+
+      7. For reporting purposes:\r
+
+      o Display distinct department IDs available in the employees table.\r
+
+      o Display employee_id along with first_name as fname and last_name as
+      lname \r
+
+      using column aliases.\r
+
+      o Display employee_id and salary, ordering the results by salary in
+      descending \r
+
+      order"
+    languageId: markdown
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE SALARY BETWEEN 3000 AND 8000;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE EMPLOYEE_ID BETWEEN 10 AND 120; "
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE HIRE_DATE BETWEEN DATE '2005-01-01' AND DATE '2007-12-31';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE HIRE_DATE BETWEEN TO_DATE('01-01-2005', 'DD-MM-YYYY') AND
+      TO_DATE('31-12-07', 'DD-MM-YY');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE NOT SALARY BETWEEN 5000 AND 9000;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE HIRE_DATE BETWEEN DATE '2001-01-01' AND DATE '2003-01-01';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES \r
+
+      WHERE FIRST_NAME LIKE 'El%';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE LAST_NAME LIKE '%n';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE FIRST_NAME LIKE '%an%';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE FIRST_NAME LIKE '_r%';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE FIRST_NAME LIKE 'A__%';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE DEPARTMENT_ID IN (10, 20, 30)\r
+
+      ORDER BY DEPARTMENT_ID;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE JOB_ID IN ('SA_REP', 'HR_REP', 'IT_PROG');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE MANAGER_ID IN (100, 101, 102)\r
+
+      ORDER BY MANAGER_ID;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE SALARY IN (2400, 4800, 8000)\r
+
+      ORDER BY SALARY;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE NOT DEPARTMENT_ID IN (50, 60, 90)\r
+
+      ORDER BY DEPARTMENT_ID;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE (SALARY > 5000 OR DEPARTMENT_ID = 50) AND JOB_ID LIKE 'IT_PROG';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT DISTINCT DEPARTMENT_ID \r
+
+      FROM HR.EMPLOYEES;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, FIRST_NAME AS FNAME, LAST_NAME AS LNAME \r
+
+      FROM HR.EMPLOYEES;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, SALARY \r
+
+      FROM HR.EMPLOYEES\r
+
+      ORDER BY SALARY DESC;"
+    languageId: oracle-sql

@@ -1,0 +1,112 @@
+cells:
+  - kind: 1
+    value: "You are working as a database developer in an organization. The company
+      maintains an \r
+
+      EMPLOYEE table with the following attributes: employee_id, salary,
+      department_id, job_id, \r
+
+      hire_date, first_name, last_name, and manager_id. Based on this table,
+      perform the following \r
+
+      tasks.\r
+
+      \r
+
+      1. The HR department wants to review salary adjustments. Write queries to
+      display \r
+
+      employee_id and salary along with:\r
+
+      o a salary increased by 500,\r
+
+      o a salary deducted by 200,\r
+
+      o annual salary (monthly salary × 12),\r
+
+      o half of the salary,\r
+
+      o and the remainder when salary is divided by 1000.\r
+
+      \r
+
+      2. The management wants to filter employees based on different conditions.
+      Write queries \r
+
+      to:\r
+
+      o Display employees who earn more than 5000 and belong to department 50.\r
+
+      o Display employees who work in department 10 or department 20.\r
+
+      o Display employees whose job_id is 'IT_PROG' and salary is greater than
+      4000.\r
+
+      o Display employees whose job_id is 'SA_REP' or whose salary is greater
+      than \r
+
+      10000.\r
+
+      o Display employees who are not working in department 90.\r
+
+      \r\n"
+    languageId: markdown
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, SALARY,\r
+
+      \    SALARY + 500 AS INC_SAL,\r
+
+      \    SALARY - 200 AS DEC_SAL,\r
+
+      \    SALARY * 12 AS ANNUAL_SAL,\r
+
+      \    SALARY / 2 AS HALF_SAL,\r
+
+      \    MOD(SALARY, 1000) AS SALARY_REMAINDER\r
+
+      FROM HR.EMPLOYEES;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE SALARY > 5000 AND DEPARTMENT_ID = 50;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "\r
+
+      SELECT * \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE DEPARTMENT_ID = 10 OR DEPARTMENT_ID = 20;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE JOB_ID LIKE '%IT_PROG%' AND SALARY > 4000;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE JOB_ID = 'SA_REP' OR SALARY > 10000;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE NOT DEPARTMENT_ID = 90;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE DEPARTMENT_ID != 90;"
+    languageId: oracle-sql

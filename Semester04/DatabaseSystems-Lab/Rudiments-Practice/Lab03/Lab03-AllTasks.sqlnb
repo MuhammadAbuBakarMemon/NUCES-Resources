@@ -1,0 +1,239 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE Departments(\r
+
+      \    DEPARTMENT_ID INT PRIMARY KEY, \r
+
+      \    DEPARTMENT_NAME VARCHAR2(50),\r
+
+      \    OFFICE_LOCATION VARCHAR2(50)\r
+
+      );\r
+
+      \r
+
+      CREATE TABLE Students (\r
+
+      \    STUDENT_ID INT PRIMARY KEY,\r
+
+      \    STUDENT_NAME VARCHAR(50),\r
+
+      \    AGE INT,\r
+
+      \    EMAIL VARCHAR(60),\r
+
+      \    DEPARTMENT_ID INT,\r
+
+      \    STATUS VARCHAR(20),\r
+
+      \    FOREIGN KEY (Department_ID) REFERENCES Departments(Department_ID)\r
+
+      );\r
+
+      \r
+
+      CREATE TABLE Teachers(\r
+
+      \    TEACHER_ID INT PRIMARY KEY,\r
+
+      \    TEACHER_NAME VARCHAR2(50),\r
+
+      \    EMAIL VARCHAR2(60),\r
+
+      \    DEPARTMENT_ID INT,\r
+
+      \    FOREIGN KEY (DEPARTMENT_ID) REFERENCES Departments(DEPARTMENT_ID)\r
+
+      );\r
+
+      \r
+
+      CREATE TABLE Courses(\r
+
+      \    COURSE_ID INT PRIMARY KEY,\r
+
+      \    COURSE_NAME VARCHAR2(50),\r
+
+      \    CREDIT_HOURS INT, \r
+
+      \    DEPARTMENT_ID INT,\r
+
+      \    FOREIGN KEY (DEPARTMENT_ID) REFERENCES Departments(DEPARTMENT_ID)\r
+
+      );\r
+
+      \r
+
+      CREATE TABLE Enrollment(\r
+
+      \    ENROLLMENT_ID INT PRIMARY KEY, \r
+
+      \    STUDENT_ID INT, \r
+
+      \    COURSE_ID INT ,\r
+
+      \    ENROLL_DATE DATE,\r
+
+      \    FOREIGN KEY (STUDENT_ID) REFERENCES Students(STUDENT_ID),\r
+
+      \    FOREIGN KEY (COURSE_ID) REFERENCES Courses (COURSE_ID)\r
+
+      );\r
+
+      \r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO Departments VALUES(1, 'Finance', 'Upper Deck');\r
+
+      INSERT INTO Departments VALUES(2, 'Marketing', 'Skybox');\r
+
+      INSERT INTO Departments VALUES(3, 'IT', 'BB Court');"
+    languageId: oracle-sql
+  - kind: 2
+    value: INSERT INTO Students (STUDENT_ID, STUDENT_NAME, AGE, EMAIL,
+      DEPARTMENT_ID, STATUS) VALUES (1, 'Muahmmad Abu Bakar', 20,
+      'abubakar@gmail.com', 1, 'Active');
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM Students;
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO Students (STUDENT_ID, STUDENT_NAME, AGE, EMAIL,
+      DEPARTMENT_ID, STATUS) VALUES (2, 'Muahmmad Ali', 16, 'aligmail.com', 2,
+      'Active');\r
+
+      INSERT INTO Students (STUDENT_ID, STUDENT_NAME, AGE, EMAIL, DEPARTMENT_ID,
+      STATUS) VALUES (3, 'Waqar Shahid', 21, 'waqar@gmail.com', 3,
+      'Active');\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO Teachers (TEACHER_ID, TEACHER_NAME, EMAIL, DEPARTMENT_ID) \r
+
+      VALUES (1, 'Sir Dr. Farrukh Hasan Syed', 'faarrukh1@gmail.com', 1);\r
+
+      \r
+
+      INSERT INTO Teachers (TEACHER_ID, TEACHER_NAME, EMAIL, DEPARTMENT_ID) \r
+
+      VALUES (2, 'Sir Atif', 'atif@gmail.com', 2);\r
+
+      \r
+
+      INSERT INTO Teachers (TEACHER_ID, TEACHER_NAME, EMAIL, DEPARTMENT_ID) \r
+
+      VALUES (3, 'Sir Haseeb Hussain', 'haseeb@gmail.com', 3);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO Courses VALUES(2, 'DSA', 3, 2);\r
+
+      INSERT INTO Courses VALUES(1, 'PF', 3, 1);\r
+
+      INSERT INTO Courses VALUES(3, 'AI', 3, 2);\r
+
+      \r
+
+      INSERT INTO Enrollment VALUES(1, 2, 3, DATE '2026-03-30');\r
+
+      INSERT INTO Enrollment VALUES(2, 3, 2, DATE '2005-11-30');\r
+
+      INSERT INTO Enrollment VALUES(3, 2, 3, DATE '1990-07-03');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question Number 02 \r
+
+      \r
+
+      ALTER TABLE Students \r
+
+      ADD PhoneNumber VARCHAR2(15);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--3. Modify the Email column size in Teachers table to 80 characters.\r
+
+      \r
+
+      ALTER TABLE Teachers \r
+
+      MODIFY EMAIL VARCHAR2(80);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--4. Rename table Teachers to Instructors.\r
+
+      \r
+
+      RENAME Teachers TO Instructors;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--5. Add a CHECK constraint to ensure Age ≤ 30.\r
+
+      \r
+
+      ALTER TABLE Students \r
+
+      ADD CONSTRAINT chk_age CHECK(AGE <= 30);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--6. Insert a new student who belongs to Computer Science department.\r
+
+      \r
+
+      INSERT INTO Departments VALUES(4, 'Computer Science', 'Pull ke peeche');\r
+
+      \r
+
+      INSERT INTO Students VALUES(4, 'Usman',32 , 'us@hotmail.com', 4,
+      'Active');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * FROM DEPARTMENTS;\r
+
+      SELECT * FROM STUDENTS;"
+    languageId: oracle-sql
+  - kind: 2
+    value: INSERT INTO Students VALUES(4, 'Usman', 12 , 'us@hotmail.com', 4,
+      'Active', '0333-2295211');
+    languageId: oracle-sql
+  - kind: 2
+    value: "--8. Add a UNIQUE constraint on CourseName.\r
+
+      \r
+
+      ALTER TABLE Courses \r
+
+      ADD CONSTRAINT uni_course_name UNIQUE (COURSE_NAME);"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM COURSES;
+    languageId: oracle-sql
+  - kind: 2
+    value: "--9. Write SQL to insert a course without specifying CreditHours.\r
+
+      \r
+
+      INSERT INTO Courses (COURSE_ID, COURSE_NAME, DEPARTMENT_ID) VALUES(4,
+      'OS', 3);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--10. Add a FOREIGN KEY in Enrollments using ALTER TABLE\r
+
+      \r
+
+      ALTER TABLE Enrollment\r
+
+      ADD CONSTRAINT fk_student_id\r
+
+      FOREIGN KEY (STUDENT_ID) REFERENCES Students(STUDENT_ID);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "ALTER TABLE Courses\r
+
+      RENAME COLUMN COURSE_NAME to SYLLABUS_NAME;"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM Courses;
+    languageId: oracle-sql
+  - kind: 2
+    value: "ALTER TABLE Courses\r
+
+      RENAME COLUMN SYLLABUS_NAME TO COURSE_NAME;"
+    languageId: oracle-sql

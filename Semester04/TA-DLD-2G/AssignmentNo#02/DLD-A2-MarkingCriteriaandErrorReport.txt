@@ -1,0 +1,478 @@
+Marking Criteria 
+
+- All questions carried equal marks distribution (10/each)
+- The total marks for a question was also divided equally into it's sub parts 
+- Since Question 2 had a printing problem, leading to various methods to solve the question, which lead to more than 1 correct solutions, depending on the simplification path followed, all students who attempted it (all of what was asked in the question) regardless of if your solution was correct or incorrect were awarded full marks
+
+- Wrong Answer loses 1 mark (no ECF on the answer)
+- Rest of the marks are for method, the earlier the error was made the more marks were lost
+- If an error was made in the starting step I have still awarded maximum possible marks for ECF/attempting the question (Binary Marking not followed)
+- Even if the feedback says incorrect you were awarded partially for ECF/effort 
+
+How to read the feedback report KEY
+- If incorrect is written besides a question that means the entire question (all parts of the questions had some sort of errors)
+- Use it for your improvements. 
+- I tried my level best to be fair with grading every assignment
+
+I am a human at the end of the day, and I can make mistakes. Hence if you have appropriate justification you may challenge me. I am open to that. But I have already awarded everyone maximum possible marks every where for effort and ECF (where applicable). However do be mindful that the reason I have given such feedback is for you to not email me...... But if you have a VALID VALID JUSTFICATION THEN ONLY YOU MAY (even if I rectify that 1-2 mark might only increase because I've barely deducted 2 marks for a wrong answer usually 1 was deducted, but yes if method was incorrect then the deduction increased)
+
+Some General Feedback
+- Please study 2 level form, it gets tested in the exam, we had a question for it in both our mid 2 and the final, alot of you got it wrong
+- Please take a look at what you submit, if the submission has cropped images, or clear pictures. I won't be checking them next time, because I have done that in the past 2 assignments and have notified you guys of that. Please be mindful of that
+- Most of the class got the 2 level forms incorrect 
+- if the question specifies NOR-NOR then only they can be used 
+- No NOR and Negative OR are not the same....
+- Negative OR is equal to NAND, but if the question states one the examiner is expecting you use that
+- This is implied knowledge that you are to draw 
+- If you are copying kindly use some level of common sense. (e.g Using two connection and a gate but then never using that output, then why did you make that connection in the first place when it wasn't the output nor was it every helping you to get to your desired output) This one error is just an example the same error was propagated in every soo many solutions 
+- When you copy please try and put some effort to show working, like you've drawn KMAPS but ho were you able to draw out the minimal expression without any grouping done on those??
+- I have not penalized/deducted marks although there were for the circuit, because of the statement some students wrote, please if the question explicitly asks for something do that even of that is obvious, there is a reason why it is being asked for because examiner wants to see it and it carries marks 
+- It is implied knowledge as part of your course that whenever a circuit is required you use the minimal number of gates possible because imagine a real life scenario you being an engineer, no one would want that if a goal can be achieved in less cost you do that same task using up more resources
+- If the question tells you to use NAND and Negative OR for a circuit you don't have an option to use 1 of them, you've to use both
+
+
+25K-0527
+Q5 
+Minimum SOP's grouping done is incorrect you should get 1 8 cell and 1 4 cell group
+but I didn't penalize because of the simplification part me that error vaporized/got nullified as the final simplified exp was correct, if you do that in the exam Sir will deduct marks (can tell by experience)
+Q7 
+part 1 incorrect 
+Q8 
+part b incorrect  
+Q10
+part a minimum SOP incorrect
+(outstanding work and presentation!!!)
+
+25K-0578
+Q2
+no circuit drawn, I have not deducted marks although there were for the circuit, because of the statement you wrote, please if the question explicitly asks for something do that even of that is obvious, there is a reason why it is being asked for because examiner wants to see it and it carries marks 
+Q3
+part 1 incorrect 
+Q5
+part 2, 3, and 4 are incorrect
+Q7 
+part 1 incorrect 
+Q10
+part b incorrect
+(outstanding work and presentation!!!)
+
+25K-0819
+Q1 
+part4 incorrect
+Q4
+part 1 and 2 (given full but you are not supposed to use as many gates, if you do that in the exam Sir will deduct marks (can tell by experience))
+Q7 
+part 2 and 3 incorrect
+Q10
+part a minimum SOP and POS incorrect
+
+25K-0772
+Q2
+no circuit drawn, I have not deducted marks although there were for the circuit, because of the statement you wrote, please if the question explicitly asks for something do that even of that is obvious, there is a reason why it is being asked for because examiner wants to see it and it carries marks 
+Q3
+part 1 and 2 incorrect 
+Q5
+all parts incorrect
+Q7 
+part 1 incorrect 
+Q10
+part b incorrect
+
+25K-0708
+Q3 
+all parts incorrect 
+Q5 
+because you expanded and solved logically it is sound and I've awarded full marks do cross check with sir on if he would accept a solution like this in the exam, because what most students and I too did back in my time was to draw gates without expanding, because that just increases the number of gates in the circuit 
+Q6
+incorrect 1 mark lost for answer (silly mistake, but I had to be fair with everyone because of the marking key)
+Q7 
+part a and 3 incorrect
+
+25K-0515
+Q2
+given full but kindly for future note that if the question asks for something you are supposed to do it no matter how obvious it is
+Q3
+part i NOR implementation incorrect
+Q5 incorrect
+Q7
+part 1 incorrect
+Q10
+part b incorrect
+
+25K-0883
+Q5
+part a and b incorrect
+Q10
+part a incorrect
+
+25K-0522
+Q3
+incorrect
+Q4
+part a
+Q5
+part b incorrect 
+Q8
+part b
+
+25K-0790
+Q3 incorrect
+Q4
+incorrect
+Q5 
+part b and d incorrect
+Q6 incorrect
+Q8
+part b incorrect
+Q10
+part b incorrect
+
+
+Mohaddisa Zehra (your name was used because the student ID didn't show on the NU ID email, Sorry)
+Q3)
+part a and b incorrect
+Q4 
+incorrect
+Q5)
+incorrect
+Q7
+part c incorrect
+Q9 
+part b incorrect
+
+25K-0803
+
+Q1
+part 2 and 3 incorrect part 4 missing 
+Q3 
+incorrect
+Q4
+part 1 NOT gate not permitted for usage in the problem statement 
+Q5
+alomst missing 
+Q6
+missing 
+Q7
+incorrect
+Q8 
+incorrect
+Q9
+incorrect
+Q10 
+part b incorrect
+
+
+25K-0543 - Plagiarism
+Q2
+question asked for 3 things 
+Q3 
+incorrect
+Q4
+part 1 incorrect
+Q5
+all incorrect but part a
+Q8
+part b incorrect
+
+25K-0559
+Q1
+part 2,3, 4 incorrect 
+Q2
+circuit missing 
+Q3
+incorrect
+Q4
+part 1 incorrect
+Q5
+POS exp missing and part b incorrect
+Q8
+part b incorrect
+
+25K-0561
+
+Q1
+part a, c incorrect
+Q3
+incorrect
+Q4
+incorrect
+Q5
+part d incorrect
+Q8
+part b incorrect
+
+25K-0572
+Q4
+part 1 incorrect
+Q5
+part b incorrect , c, d, missing 
+Q8
+part b incorrect
+
+25K-0576
+Q1
+part 2 incorrect
+Q4
+incorrect
+Q5
+part b, c, d incorrect
+Q8
+part b, awarded full because logically it is correct but see try keeping the variables same as to what they were given in the question, some one who grades on logic won't deduct marks, but it's better to never give the marker a chance to deduct any marks 
+Q9
+part b incorrect
+Q10
+part b missing 
+
+25K-0609
+Q3
+incorrect
+Q4
+part 1 incorrect
+Q5
+part b and c incorrect
+Q8
+part b incorrect
+Q10
+part a incorrect
+
+25K-0653
+Q1
+part b incorrect
+Q4
+incorrect
+Q5
+part c, d incorrect, d is logically correct but NOT gates are not permitted in a NOR-NOR only implementation
+Q8
+part b, awarded full because logically it is correct but see try keeping the variables same as to what they were given in the question, some one who grades on logic won't deduct marks, but it's better to never give the marker a chance to deduct any marks 
+Q9
+part b incorrect 
+Q10
+incorrect
+
+25K-0668
+Q4
+incorrect
+Q5
+part b incorrect 
+Q7 
+part b have a look at what was submitted, please be careful of that in the future. I can not assume what was supposed to be written when, awarded full marks regardless
+part c incorrect  
+Q10 
+part b incorrect
+
+25K-0684
+Q3
+incorrect
+Q5
+c, and d incorrect
+Q8
+part b incorrect
+Q10
+incorrect 
+
+25K-0691 
+Q3 
+incorrect 
+Q5
+incorrect 
+Q9
+part a incorrect 
+(outstanding work and presentation!!!)
+
+25K-0692
+Q3
+incorrect
+Q4
+incorrect
+Q5
+part b and c incorrect
+Q8
+part b incorrect
+
+25K-0710
+Q3
+incorrect
+Q5
+incorrect
+Q7
+part a incorrect
+Q10
+part b incorrect
+
+25K-0722
+Q1
+part c ans is wrong but since it was a petty mistake ik you forgot tocopy paste, I've awarded full
+Q3
+part 1 and 2 incorrect 
+Q5
+incorrect
+Q7
+part a incorrect
+
+25K-0724 - Plagiarism
+Q2
+question asked for 3 things 
+Q3 
+incorrect
+Q4
+part 1 incorrect
+Q5
+all incorrect but part a
+Q8
+part b incorrect
+
+25K-0742 - Plagiarism (Q3 only)
+Q3
+incorrect
+Q4
+incorrect
+Q5
+part a and b incorrect
+Q6
+incorrect
+Q7
+part c incorrect
+
+25K-0784 - Plagiarism (Q3 only)
+Q3
+incorrect
+Q4
+incorrect
+Q5
+part a and b incorrect
+Q6
+incorrect
+Q7
+part c incorrect
+Q10
+part (ii) incorrect
+
+25K-0807
+Q3
+incorrect
+Q4
+part 1 incorrect
+Q5
+part b and c incorrect
+Q8 
+part b incorrect
+
+25K-0810
+Q5 
+incorrect
+Q7
+incorrect (I've deducted lesser marks than other for you because logically everything is fine but the answer, you've inverted every single variable, or have missed a term)
+
+25K-0820
+Q3
+incorrect and missing parts
+Q4
+incorrect
+Q5
+part b, c, d incorrect
+Q9
+part b incorrect
+Q10
+incorrect
+
+25K-0834
+Q3
+part b and d 
+Q5 
+incorrect
+Q7
+part a 
+Q10
+part b incorrect
+
+25K-0863
+Q3
+part b, c, d incorrect
+Q4
+NAND - NOR implementation is not you drawing 2 separate circuits 1 using each gate 
+Q5
+incorrect
+Q8
+part b incorrect
+Q10
+incorrect
+
+25K-0891
+Q1
+part d incorrect
+Q4
+incorrect 
+Q7
+part c incorrect
+Q9
+part a and b incorrect
+Q10
+part a incorrect
+(outstanding work and presentation!!!)
+
+25K-0943
+
+Q3
+incorrect
+Q4
+incorrect
+Q5
+part a and b incorrect
+Q7
+part a incorrect
+
+
+25K-0957
+Q4 
+incorrect
+Q5
+part b and c incorrect
+Q9
+part b incorrect
+Q8
+part b, awarded full because logically it is correct but see try keeping the variables same as to what they were given in the question, some one who grades on logic won't deduct marks, but it's better to never give the marker a chance to deduct any marks 
+Q10
+part b incorrect
+
+25K-0948
+Q3
+incorrect
+Q4
+part a incorrect
+Q5
+incorrect
+Q7
+part b incorrect
+Q8
+part b incorrect
+
+25K-0980
+Q3
+part 1 incorrect and part 2 missing
+Q4
+incorrect
+Q5
+incorrect and 1 part missing 
+Q8
+part b partially solved awarded partial marks in accordance 
+
+25K-3054
+Q3
+part 1 incorrect
+Q4
+incorrect
+Q5
+incorrect
+Q7
+part a and b incorrect
+Q10
+part b incorrect
+
+
+
+
+
+
+
+
+

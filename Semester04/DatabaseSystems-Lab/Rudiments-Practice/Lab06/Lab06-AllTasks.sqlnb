@@ -1,0 +1,194 @@
+cells:
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, FIRST_NAME, SALARY\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE SALARY = (\r
+
+      \    SELECT MAX(SALARY) \r
+
+      \    FROM HR.EMPLOYEES\r
+
+      \r
+
+      );\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT FIRST_NAME, DEPARTMENT_ID, SALARY \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE SALARY > (\r
+
+      \    SELECT AVG(SALARY) \r
+
+      \    FROM HR.EMPLOYEES\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, FIRST_NAME, DEPARTMENT_ID\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE DEPARTMENT_ID IN (\r
+
+      \    SELECT DEPARTMENT_ID\r
+
+      \    FROM HR.DEPARTMENTS d\r
+
+      \    JOIN HR.LOCATIONS l\r
+
+      \    ON d.LOCATION_ID = l.LOCATION_ID\r
+
+      \    WHERE city = 'Toronto'\r
+
+      );\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT EMPLOYEE_ID, FIRST_NAME, DEPARTMENT_ID\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE DEPARTMENT_ID IN (\r
+
+      \r
+
+      \    SELECT DEPARTMENT_ID\r
+
+      \    FROM HR.DEPARTMENTS \r
+
+      \    WHERE LOCATION_ID IN (\r
+
+      \        SELECT LOCATION_ID\r
+
+      \        FROM HR.LOCATIONS\r
+
+      \        WHERE city = 'Toronto'\r
+
+      \    ) \r
+
+      \r
+
+      );"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Task 4: Find employees who report to managers working in departments
+      located in\r
+
+      location_id 1700.\r
+
+      Return:\r
+
+       first_name\r
+
+       manager_id\r
+
+       department_id\r
+
+      Topic: Multi-row subquery with IN."
+    languageId: markdown
+  - kind: 2
+    value: "--wrong \r
+
+      \r
+
+      SELECT FIRST_NAME, MANAGER_ID, DEPARTMENT_ID\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE DEPARTMENT_ID IN ( \r
+
+      \    SELECT DEPARTMENT_ID \r
+
+      \    FROM HR.DEPARTMENTS\r
+
+      \    WHERE LOCATION_ID IN (\r
+
+      \        SELECT LOCATION_ID\r
+
+      \        FROM HR.LOCATIONS\r
+
+      \        WHERE LOCATION_ID = 1700\r
+
+      \    )\r
+
+      \r
+
+      \r
+
+      )"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT FIRST_NAME, MANAGER_ID, DEPARTMENT_ID\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE MANAGER_ID IN (\r
+
+      \    SELECT EMPLOYEE_ID \r
+
+      \    FROM HR.EMPLOYEES\r
+
+      \    WHERE DEPARTMENT_ID IN (\r
+
+      \        SELECT DEPARTMENT_ID\r
+
+      \        FROM HR.DEPARTMENTS\r
+
+      \        WHERE LOCATION_ID = 1700\r
+
+      \    )\r
+
+      );\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT FIRST_NAME, JOB_ID, SALARY \r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE SALARY > ANY (\r
+
+      \    SELECT SALARY \r
+
+      \    FROM HR.EMPLOYEES\r
+
+      \    WHERE JOB_ID IN (\r
+
+      \        SELECT JOB_ID \r
+
+      \        FROM HR.JOBS\r
+
+      \        WHERE JOB_TITLE = 'Sales Representative'\r
+
+      \r
+
+      \    )\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM HR.JOBS;
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: ""
+    languageId: oracle-sql

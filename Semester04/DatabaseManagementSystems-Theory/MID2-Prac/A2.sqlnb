@@ -1,0 +1,315 @@
+cells:
+  - kind: 1
+    value: Question 1 in Assignment
+    languageId: markdown
+  - kind: 2
+    value: "-- Query 3\r
+
+      \r
+
+      select c.customer_name \r
+
+      from customers c\r
+
+      where c.customer_id IN (\r
+
+      \    select customer_id\r
+
+      \    from purchases\r
+
+      )\r
+
+      AND customer_id NOT IN (\r
+
+      \    select customer_id \r
+
+      \    from purchases p\r
+
+      \    join purchase_details pd\r
+
+      \    on p.purchase_id = pd.purchase_id \r
+
+      \    join Books b \r
+
+      \    on pd.book_id = b.book_id\r
+
+      \    where publisher = 'Pearson' \r
+
+      \r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 4\r
+
+      --a complicated approach\r
+
+      \r
+
+      select b.title \r
+
+      from Books b \r
+
+      where b.book_id NOT IN (\r
+
+      \    select book_id \r
+
+      \    from purchase_details pd\r
+
+      \    join purchases p\r
+
+      \    on pd.purchase_id = p.purchase_id  \r
+
+      \r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 4 \r
+
+      \r
+
+      select title \r
+
+      from books \r
+
+      where book_id NOT IN (\r
+
+      \    select book_id \r
+
+      \    from purchase_details\r
+
+      \r
+
+      )"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 5 \r
+
+      \r
+
+      select author_name\r
+
+      from authors a\r
+
+      join book_authors ba\r
+
+      on a.author_id = ba.author_id \r
+
+      join books b\r
+
+      on ba.book_id = b.book_id \r
+
+      where b.price > (\r
+
+      \    select avg(price)\r
+
+      \    from books\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 5 \r
+
+      --alternative approach \r
+
+      \r
+
+      select author_name \r
+
+      from authors \r
+
+      where author_id IN(\r
+
+      \    select author_id \r
+
+      \    from book_authors \r
+
+      \    where book_id IN (\r
+
+      \        select book_id \r
+
+      \        from books \r
+
+      \        where price > (select avg(price) from books)\r
+
+      \r
+
+      \    )\r
+
+      \r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 6 optimized version \r
+
+      \r
+
+      select c.customer_id, sum(pd.quantity) as tot_qty\r
+
+      from customers c\r
+
+      join purchases p\r
+
+      on c.customer_id = p.customer_id \r
+
+      join purchase_details pd\r
+
+      on p.purchase_id = pd.purchase_id \r
+
+      group by c.customer_id \r
+
+      having sum(pd.quantity) > 10;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 6 optimized version \r
+
+      \r
+
+      select c.customer_id, sum(pd.quantity) as tot_qty\r
+
+      from purchases p\r
+
+      join purchase_details pd\r
+
+      on p.purchase_id = pd.purchase_id \r
+
+      group by c.customer_id \r
+
+      having sum(pd.quantity) > 10;"
+    languageId: oracle-sql
+  - kind: 1
+    value: Question 2 in Assignment
+    languageId: markdown
+  - kind: 2
+    value: "--Query 1\r
+
+      \r
+
+      select p.passenger_name, b.bus_name, r.source_city, r.destination_city\r
+
+      from Passengers p\r
+
+      join Tickets t\r
+
+      on p.passenger_id = t.passenger_id \r
+
+      join Buses b\r
+
+      on t.bus_id = b.bus_id\r
+
+      join Routes r\r
+
+      on t.route_id = r.route_id;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 2\r
+
+      \r
+
+      select p.passenger_name, t.travel_date, t.fare\r
+
+      from Passengers p\r
+
+      join Tickets t\r
+
+      on p.passenger_id = t.passenger_id;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 3\r
+
+      \r
+
+      select b.bus_name, COUNT(t.passenger_id) as total_num_of_passengers\r
+
+      from Buses b\r
+
+      join Tickets t\r
+
+      on b.bus_id = t.bus_id\r
+
+      group by b.bus_id, b.bus_name;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 4\r
+
+      \r
+
+      select r.source_city, r.destination_city, p.passenger_name\r
+
+      from Passengers p\r
+
+      join Tickets t\r
+
+      on p.passenger_id = t.passenger_id\r
+
+      join Routes r\r
+
+      on t.route_id = r.route_id;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 5\r
+
+      \r
+
+      CREATE VIEW PassengerTravelSummary AS\r
+
+      select p.passenger_name, b.bus_name, r.source_city, r.destination_city,
+      t.travel_date \r
+
+      from Tickets t\r
+
+      join Passengers p\r
+
+      on t.passenger_id = p.passenger_id\r
+
+      join Buses b\r
+
+      on t.bus_id = b.bus_id\r
+
+      join Routes r\r
+
+      on t.route_id = r.route_id; "
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Query 6\r
+
+      \r
+
+      --6.1\r
+
+      alter table passengers\r
+
+      add contact_number varchar2(15);\r
+
+      \r
+
+      --6.2 \r
+
+      alter table Tickets \r
+
+      modify fare decimal(10,2);\r
+
+      \r
+
+      --another way to do the same thing \r
+
+      alter table Tickets\r
+
+      alter column fare decimal(10, 2);\r
+
+      \r
+
+      --6.3\r
+
+      alter table buses \r
+
+      drop column capacity;\r
+
+      \r
+
+      --6.4 \r
+
+      drop table Routes;"
+    languageId: oracle-sql

@@ -1,0 +1,181 @@
+Format:
+NUID 
+(whatever below is what you got wrong)
+-Those of you who got full marks you won't be mentioned in here unless you have that feedback for outstanding work
+
+(Here we go again!!!)
+
+25K-0722
+Outstanding work and presentation!!!
+
+25K-0684
+Outstanding work and presentation!!!
+
+25K-0772
+Q10
+the theory part where an explanation was expected is missing
+Outstanding work and presentation!!!
+
+25K-3054
+Q5
+Figure 6's representation is incorrect
+outstanding work and presentation!!!
+
+25K-0691
+outstanding work and presentation!!!
+
+25K-0708
+Q3
+incorrect
+Q10
+diagram missing
+
+25K-0527
+Q7
+just the very last shift you did is incorrect, it should've retained it's memory after clearing
+Outstanding work and presentation!!!
+
+25K-0663
+Q3
+incorrect
+Q10
+no diagram
+plus when you write flipflop it is always better to specify, in this case it behaves like a T flipflop
+
+25K-0561
+Q3
+incorrect
+you missed one out of the eight consecutive high outputs
+
+25K-0883
+Q5
+Fig 6 incorrect
+
+25K-0653
+Q7
+incorrect
+Q9
+incorrect
+
+25K-0742
+Outstanding work and presentation!!!
+
+25K-0653
+Outstanding work and presentation!!!
+
+24K-0554
+Q1
+incorrect
+Q3
+incorrect
+Q5
+incorrect
+Q6
+incorrect
+Q9
+incorrect
+
+25K-0724
+Q3
+incorrect
+
+25K-0543
+Q3 
+incorrect
+
+25K-0975
+Q1
+incorrect
+Q3
+incorrect
+Q4
+incorrect
+Q7 and Q8
+I haven't deducted marks on this but have a look at your Q and Q' waveforms why are they contradicting (the base logic for negation that you came across in the initial weeks state that Q' must be the complement of Q, if you make them out of sync in the exam you'll lose out on marks)
+
+25K-0980
+Q7
+Incorrect 
+Q8
+Incorrect 
+
+25K-0810
+Q1
+Q's complement is drawn, no logic marks deducted only 1 mark for the answer, since I had to be fair with everyone
+Q3
+inverted waveform drawn, same 1 mark deduction
+Q10
+you missed the part where the function for the given device was to be written 
+Outstanding work and presentation!!!
+
+25K-0784
+Q3
+incorrect
+Q5
+fig 6 incorrect
+Q6
+incorrect
+Q8
+incorrect
+Q9
+incorrect
+Q10
+waveform missing 
+
+25K-0668
+Q3
+incorrect
+Q8
+incorrect
+Q9 
+incorrect
+Q10
+waveform missing 
+
+25K-0819
+Q7
+incorrect
+Q10
+you missed the part where the function for the given device was to be written 
+Outstanding work!!!
+
+25K-0863
+Q4
+missing waveform partially, but I haven't deducted marks 
+
+25K-0820
+Q7
+incorrect
+Q9
+incorrect
+Outstanding work and presentation!!!
+
+25K-0710
+Q8
+incorrect
+
+25K-0803
+Q3
+incorrect
+Q9
+incorrect
+Q10
+the waveform is missing 
+
+25k-0576
+Q1-Q4
+no waveform marked partially for correct logic
+Q5
+again waveform missing, but logic of fig 5 is also incorrect
+Q6-Q9 
+waveform missing 
+Q10
+no waveform and you missed the part where the function for the given device was to be written, which would lead you to a zero but I have still given 2 grace marks for effort
+
+25K-0576
+almost every question was incomplete marks awarded for the partial solution and logic where applicable
+
+
+25K-0692 - p
+25K-0790 - p
+Q1,2,3,5,6,7,8,9,10 all same 

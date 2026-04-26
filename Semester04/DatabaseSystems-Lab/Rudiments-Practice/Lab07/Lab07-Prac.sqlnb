@@ -1,0 +1,308 @@
+cells:
+  - kind: 2
+    value: "select e.EMPLOYEE_ID, e.FIRST_NAME, e.LAST_NAME, d.DEPARTMENT_NAME\r
+
+      from HR.EMPLOYEES e\r
+
+      LEFT OUTER JOIN HR.DEPARTMENTS d\r
+
+      ON e.DEPARTMENT_ID = d.DEPARTMENT_ID;\r
+
+      \r
+
+      select e.EMPLOYEE_ID, e.FIRST_NAME, e.LAST_NAME, d.DEPARTMENT_NAME\r
+
+      from HR.EMPLOYEES e\r
+
+      RIGHT OUTER JOIN HR.DEPARTMENTS d\r
+
+      ON e.DEPARTMENT_ID = d.DEPARTMENT_ID;\r
+
+      \r
+
+      SELECT e.EMPLOYEE_ID, e.FIRST_NAME, e.LAST_NAME, d.DEPARTMENT_NAME\r
+
+      FROM HR.EMPLOYEES e\r
+
+      FULL OUTER JOIN HR.DEPARTMENTS d\r
+
+      ON e.DEPARTMENT_ID = d.DEPARTMENT_ID;\r
+
+      \r
+
+      -- UNION - combines resultsof 2 select statements and removes duplicates
+      \r
+
+      select EMPLOYEE_ID\r
+
+      from HR.EMPLOYEES\r
+
+      UNION \r
+
+      SELECT EMPLOYEE_ID\r
+
+      FROM HR.JOB_HISTORY;\r
+
+      \r
+
+      -- UNION ALL - combines results of 2 queries burt keeps duplicates \r
+
+      select EMPLOYEE_ID\r
+
+      from HR.EMPLOYEES\r
+
+      UNION ALL\r
+
+      SELECT EMPLOYEE_ID\r
+
+      FROM HR.JOB_HISTORY;\r
+
+      \r
+
+      -- INTERSECT - gives common records/rows \r
+
+      -- shows us the employees that have changed their jobs \r
+
+      select EMPLOYEE_ID\r
+
+      from HR.EMPLOYEES\r
+
+      INTERSECT\r
+
+      SELECT EMPLOYEE_ID\r
+
+      FROM HR.JOB_HISTORY;\r
+
+      \r
+
+      \r
+
+      -- MINUS - gives records/rows that were retunred in the first query but
+      not in the second query \r
+
+      -- shows us the employees that never changes their jobs that is the
+      employees that never appeared in Job_History\r
+
+      SELECT EMPLOYEE_ID \r
+
+      FROM  HR.EMPLOYEES\r
+
+      MINUS \r
+
+      SELECT EMPLOYEE_ID \r
+
+      FROM HR.JOB_HISTORY;\r
+
+      \r
+
+      ---------------------------------------------------VIEWS-----------------\
+      -------------------------------------------------------\r
+
+      \r
+
+      -- SIMPLE VIEW: support DML Operations\r
+
+      CREATE VIEW emp_basic_view AS\r
+
+      Select employee_id, first_name, salary, department_id \r
+
+      from HR.employees;\r
+
+      \r
+
+      --Using that view \r
+
+      \r
+
+      select * \r
+
+      from emp_basic_view;\r
+
+      \r
+
+      CREATE VIEW high_sal_emp AS\r
+
+      SELECT EMPLOYEE_ID, FIRST_NAME, SALARY \r
+
+      FROM HR.EMPLOYEES \r
+
+      WHERE SALARY > 1000;\r
+
+      \r
+
+      select * from high_sal_emp;\r
+
+      \r
+
+      -- COMPLEX VIEWS: do not support DML Operations \r
+
+      \r
+
+      -- complex join was simplified into a single reuseable object \r
+
+      CREATE VIEW emp_complete_view_1 AS \r
+
+      SELECT e.FIRST_NAME || ' ' || e.LAST_NAME AS FULL_NAME, d.DEPARTMENT_NAME,
+      j.JOB_TITLE \r
+
+      FROM HR.EMPLOYEES e\r
+
+      JOIN HR.DEPARTMENTS d\r
+
+      ON e.DEPARTMENT_ID = d.DEPARTMENT_ID\r
+
+      JOIN HR.JOBS j\r
+
+      ON e.JOB_ID = j.JOB_ID;\r
+
+      \r
+
+      SELECT * \r
+
+      FROM EMP_COMPLETE_VIEW_1;\r
+
+      \r
+
+      -- READ ONLY VIEW \r
+
+      \r
+
+      CREATE VIEW dept_dets AS\r
+
+      select department_id, department_name, location_id \r
+
+      from hr.departments\r
+
+      with read only;\r
+
+      \r
+
+      UPDATE dept_dets \r
+
+      SET DEPARTMENT_NAME = 'IT'\r
+
+      WHERE DEPARTMENT_ID = 10;\r
+
+      \r
+
+      -- view with check options \r
+
+      \r
+
+      CREATE VIEW dept50_view AS\r
+
+      SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT_ID\r
+
+      FROM HR.EMPLOYEES\r
+
+      WHERE DEPARTMENT_ID = 50\r
+
+      WITH CHECK OPTION CONSTRAINT chk_dept50_only;\r
+
+      \r
+
+      SELECT * FROM dept50_view;\r
+
+      \r
+
+      update dept50_view\r
+
+      set first_name = 'Adam'\r
+
+      where department_id = 50 AND employee_id = 122;\r
+
+      \r
+
+      update dept50_view\r
+
+      set department_id = 40\r
+
+      where employee_id = 122;\r
+
+      \r
+
+      --CREATE OR REPLACE VIEW \r
+
+      \r
+
+      -- modify an existing views defination without having to drop it \r
+
+      CREATE OR REPLACE VIEW emp_basic_view AS\r
+
+      Select employee_id, first_name, LAST_NAME, salary\r
+
+      from HR.employees;\r
+
+      \r
+
+      SELECT * FROM EMP_BASIC_VIEW;\r
+
+      \r
+
+      --DROPPING A VIEW \r
+
+      DROP VIEW EMP_BASIC_VIEW;\r
+
+      \r
+
+      -- INLINE VIEW \r
+
+      -- a subquery inside the from clause, acts as a virtual table, this is
+      what we call an inline view \r
+
+      -- this temporary subquery is what acts like a view \r
+
+      \r
+
+      select * \r
+
+      from (\r
+
+      \    select employee_id, first_name, salary\r
+
+      \    from hr.employees\r
+
+      )\r
+
+      where salary > (select avg(salary) from hr.employees);\r
+
+      \r
+
+      -- MATERIALIZED VIEWS \r
+
+      \r
+
+      CREATE MATERIALIZED VIEW mat_view AS\r
+
+      SELECT EMPLOYEE_ID, FIRST_NAME \r
+
+      FROM HR.EMPLOYEES;\r
+
+      \r
+
+      SELECT * FROM MAT_VIEW;\r
+
+      \r
+
+      CREATE VIEW bas_view AS\r
+
+      SELECT EMPLOYEE_ID, FIRST_NAME \r
+
+      FROM HR.EMPLOYEES;\r
+
+      \r
+
+      SELECT * FROM BAS_VIEW;\r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r\n"
+    languageId: oracle-sql

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="202ED277-6A6B-889A-DD2A-C94501AF8FE6" name="Customers" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="29283FA0-1227-95A6-EDD2-9CE080DEE72E" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="CEBF0958-32B1-53E0-D95B-80702FDAF1CC" name="Orders" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="29283FA0-1227-95A6-EDD2-9CE080DEE72E" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="9D3B50DB-9962-1157-A773-618E7F7F5C08" name="Restaurants" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="29283FA0-1227-95A6-EDD2-9CE080DEE72E" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="47050567-FC2D-0E40-219F-82317E61B553" name="Restaurant-&gt;Customers(1:N)" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="29283FA0-1227-95A6-EDD2-9CE080DEE72E" propertySourceId="9D3B50DB-9962-1157-A773-618E7F7F5C08" propertyTargetId="202ED277-6A6B-889A-DD2A-C94501AF8FE6"/>
+   <object objectType="Relation" objectID="4FDC624B-5770-9F49-82E2-211D2223F584" name="Restaurant-&gt;Orders(1:N)" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="29283FA0-1227-95A6-EDD2-9CE080DEE72E" propertySourceId="9D3B50DB-9962-1157-A773-618E7F7F5C08" propertyTargetId="CEBF0958-32B1-53E0-D95B-80702FDAF1CC"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

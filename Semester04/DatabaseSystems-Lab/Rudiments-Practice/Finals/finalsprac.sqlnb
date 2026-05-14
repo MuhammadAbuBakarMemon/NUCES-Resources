@@ -1,0 +1,1026 @@
+cells:
+  - kind: 2
+    value: "\r
+
+      SET SERVEROUTPUT ON; -- tells sql environment to open up the output buffer
+      \r
+
+      \r
+
+      --GLOBAL VARIBALES\r
+
+      DECLARE \r
+
+      \    n1 number := 95;\r
+
+      \    n2 number := 65;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    dbms_output.put_line('Value of n1: ' || n1);\r
+
+      \    dbms_output.put_line('Value of n2: ' || n2);\r
+
+      \    \r
+
+      \    DEcLARE \r
+
+      \    n1 number := 195;\r
+
+      \    n2 number := 165;\r
+
+      \    \r
+
+      \    BEGIN\r
+
+      \        \r
+
+      \        dbms_output.put_line('n1: ' || n1);\r
+
+      \        dbms_output.put_line('n2; ' || n2);\r
+
+      \        \r
+
+      \    end;\r
+
+      \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      \r
+
+      DECLARE \r
+
+      \    eid employees.employee_id%type;\r
+
+      \    ename employees.first_name%type;\r
+
+      \    e_lname employees.last_name%type;\r
+
+      \    d_name departments.department_name%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select e.employee_id, e.first_name, e.last_name, d.department_name\r
+
+      \    into eid, ename, e_lname, d_name\r
+
+      \    from employees e\r
+
+      \    inner join departments d\r
+
+      \    on e.department_id = d.department_id\r
+
+      \    where e.employee_id = 100;\r
+
+      \r
+
+      \    dbms_output.put_line('employee id: ' || eid);\r
+
+      \    dbms_output.put_line('employee first name: ' || ename);\r
+
+      \    dbms_output.put_line('employee last name: ' || e_lname);\r
+
+      \    dbms_output.put_line('department name: ' || d_name);\r
+
+      \r
+
+      \r
+
+      END;/\r
+
+      SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \    eid employees.employee_id%type;\r
+
+      \    ename employees.first_name%type;\r
+
+      \    e_lname employees.last_name%type;\r
+
+      \    d_name departments.department_name%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select e.employee_id, e.first_name, e.last_name, d.department_name\r
+
+      \    into eid, ename, e_lname, d_name\r
+
+      \    from employees e\r
+
+      \    inner join departments d\r
+
+      \    on e.department_id = d.department_id\r
+
+      \    where e.employee_id = 100;\r
+
+      \    \r
+
+      \    dbms_output.put_line('employee id: ' || eid);\r
+
+      \    dbms_output.put_line('employee first name: ' || ename);\r
+
+      \    dbms_output.put_line('employee last name: ' || e_lname);\r
+
+      \    dbms_output.put_line('department name: ' || d_name);\r
+
+      \    \r
+
+      \    \r
+
+      END;\r
+
+      /\r
+
+      SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \    eid employees.employee_id%type;\r
+
+      \    ename employees.first_name%type;\r
+
+      \    e_lname employees.last_name%type;\r
+
+      \    d_name departments.department_name%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select e.employee_id, e.first_name, e.last_name, d.department_name\r
+
+      \    into eid, ename, e_lname, d_name\r
+
+      \    from employees e\r
+
+      \    inner join departments d\r
+
+      \    on e.department_id = d.department_id\r
+
+      \    where e.employee_id = 100;\r
+
+      \    \r
+
+      \    dbms_output.put_line('employee id: ' || eid);\r
+
+      \    dbms_output.put_line('employee first name: ' || ename);\r
+
+      \    dbms_output.put_line('employee last name: ' || e_lname);\r
+
+      \    dbms_output.put_line('department name: ' || d_name);\r
+
+      \    \r
+
+      \    \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      \r
+
+      --IF THEN STATEMENT \r
+
+      \r
+
+      SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \r
+
+      \    eid employees.employee_id%type := 100;\r
+
+      \    esal employees.salary%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \    \r
+
+      \    select salary \r
+
+      \    into esal\r
+
+      \    from employees\r
+
+      \    where employee_id = eid;\r
+
+      \    \r
+
+      \    if (esal > 5000) then \r
+
+      \        update employees \r
+
+      \        set salary = esal + 1000\r
+
+      \        where employee_id = eid;\r
+
+      \        \r
+
+      \        dbms_output.put_line('salary updated');\r
+
+      \        \r
+
+      \    end if;\r
+
+      \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      --IF THEN ELSE \r
+
+      \r
+
+      SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \    eid employees.employee_id%type := 100;\r
+
+      \    esal employees.salary%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select salary \r
+
+      \    into esal \r
+
+      \    from employees\r
+
+      \    where employee_id = eid;\r
+
+      \    \r
+
+      \    if (esal <= 15000)then\r
+
+      \        update employees \r
+
+      \        set salary = esal + 300\r
+
+      \        where employee_id = eid;\r
+
+      \        \r
+
+      \    elsif (esal <= 20000) then \r
+
+      \        update employees\r
+
+      \        set salary = esal + 200\r
+
+      \        where employee_id = eid;\r
+
+      \        \r
+
+      \    elsif (esal <= 25000) then \r
+
+      \        update employees \r
+
+      \        set salary = esal + 100\r
+
+      \        where employee_id = eid;\r
+
+      \        \r
+
+      \    else\r
+
+      \        update employees \r
+
+      \        set salary = esal + 400\r
+
+      \        where employee_id = eid;\r
+
+      \        \r
+
+      \    end if;\r
+
+      \    \r
+
+      \    dbms_output.put_line('salary updated.' || esal);\r
+
+      \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      --CASE STATEMENTS \r
+
+      \r
+
+      SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE\r
+
+      \r
+
+      \    eid employees.employee_id%type :=  100;\r
+
+      \    esal employees.salary%type;\r
+
+      \    did employees.department_id%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select employee_id, salary, department_id\r
+
+      \    into eid, esal, did\r
+
+      \    from employees \r
+
+      \    where employee_id = eid;\r
+
+      \    \r
+
+      \    case\r
+
+      \        when did = 80 then \r
+
+      \            update employees \r
+
+      \            set salary = esal + 100\r
+
+      \            where employee_id = eid;\r
+
+      \            \r
+
+      \        when did = 50 then \r
+
+      \            update employees \r
+
+      \            set salary = esal + 200\r
+
+      \            where employee_id = eid;\r
+
+      \            \r
+
+      \        when did = 40 then\r
+
+      \            update employees \r
+
+      \            set salary = esal + 300\r
+
+      \            where employee_id = eid;\r
+
+      \            \r
+
+      \        else\r
+
+      \            dbms_output.put_line('No such record');\r
+
+      \            \r
+
+      \    end case;\r
+
+      \    \r
+
+      \    dbms_output.put_line('Salary updated: ' || esal);\r
+
+      \r
+
+      END; \r
+
+      /\r
+
+      \r
+
+      --LOOPS\r
+
+      \r
+
+      SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \r
+
+      BEGIN \r
+
+      \    FOR c in (\r
+
+      \                select employee_id, first_name, salary\r
+
+      \                from employees\r
+
+      \                where department_id = 90;\r
+
+      \    )\r
+
+      \    LOOP\r
+
+      \        DBMS_OUTPUT.PUT_LINE('SALARY OF THE EMPLOYEE: ' || c.FIRST_NAME
+      || ' IS: ' || c.SALARY);\r
+
+      \                \r
+
+      \    end loop;\r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      \r
+
+      --PROCEDURES \r
+
+      \r
+
+      CREATE OR REPLACE PROCEDURE INSERT_DATA(\r
+
+      \    p_street_address IN VARCHAR2,\r
+
+      \    p_postal_code IN VARCHAR2,\r
+
+      \    p_city IN VARCHAR2,\r
+
+      \    p_state_province IN VARCHAR2,\r
+
+      \    p_country_id IN CHAR\r
+
+      )\r
+
+      \r
+
+      IS \r
+
+      \    v_location_id NUMBER;\r
+
+      \    v_total_records NUMBER;\r
+
+      \    \r
+
+      BEGIN\r
+
+      \    \r
+
+      \    SELECT MAX(location_id) + 1\r
+
+      \    INTO v_location_id\r
+
+      \    from locations;\r
+
+      \    \r
+
+      \    INSERT INTO LOCATIONS \r
+
+      \    (\r
+
+      \        LOCATION_ID,\r
+
+      \        STREET_ADDRESS,\r
+
+      \        POSTAL_CODE,\r
+
+      \        CITY,\r
+
+      \        STATE_PROVINCE,\r
+
+      \        COUNTRY_ID\r
+
+      \    )\r
+
+      \    VALUES \r
+
+      \    (\r
+
+      \        v_location_id,\r
+
+      \        p_street_address,\r
+
+      \        p_postal_code,\r
+
+      \        p_city,\r
+
+      \        p_state_province,\r
+
+      \        p_country_id\r
+
+      \    );\r
+
+      \    \r
+
+      \    select count(*)\r
+
+      \    into v_total_records\r
+
+      \    from locations;\r
+
+      \    \r
+
+      \    DBMS_OUTPUT.PUT_LINE('New record inserted with ID: ' ||
+      v_LOCATION_id);\r
+
+      \    DBMS_OUTPUT.PUT_LINE('Total records now in table: ' ||
+      v_total_RECORDS);\r
+
+      \ \r
+
+      \    \r
+
+      end;\r
+
+      /\r
+
+      \r
+
+      EXEC INSERT_DATA('DHA','1234', 'KARACHI', 'SINDH', 'IT');\r
+
+      \r
+
+      \r
+
+      --Q1\r
+
+      \r
+
+      DECLARE \r
+
+      \r
+
+      \    basesal NUMBER := 250;\r
+
+      \    allo NUMBER;\r
+
+      \    finsal NUMBER;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    allo = 0.15 * basesal;\r
+
+      \    finalsal = allo + basessal;\r
+
+      \    \r
+
+      \    \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      --Q2\r
+
+      \r
+
+      DECLARE \r
+
+      \    \r
+
+      \    fn employees.first_name%type;\r
+
+      \    sal employees.salary%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    SELECT FIRST_NAME, SALARY\r
+
+      \    INTO fn, sal\r
+
+      \    FROM EMPLOYEES\r
+
+      \    WHERE EMPLOYEE_ID = 105;\r
+
+      \    \r
+
+      \    DBMS_OUTPUT.PUT_LINE('EMP NAME: ' || fn);\r
+
+      \    dbms_output.put_line('Monthly Salary: ' || sal);\r
+
+      \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      \r
+
+      -- Q3\r
+
+      \r
+
+      DECLARE \r
+
+      \r
+
+      \    v_emp_id employees.employee_id%type := 110;\r
+
+      \    v_sal employees.salary%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select salary \r
+
+      \    into v_sal \r
+
+      \    from employees\r
+
+      \    where employee_id = v_emp_id;\r
+
+      \    \r
+
+      \    if (v_sal < 8000) then \r
+
+      \        v_sal := v_sal + 1200;\r
+
+      \    else\r
+
+      \        v_sal := v_sal + 400;\r
+
+      \        \r
+
+      \    end if;\r
+
+      \    \r
+
+      \    update employees \r
+
+      \    set salary = v_sal\r
+
+      \    where employee_id = v_emp_id;\r
+
+      \    \r
+
+      \    dbms_output.put_line('Salary increased to: ' || v_sal);\r
+
+      \    \r
+
+      \    COMMIT;\r
+
+      \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      -- Q4\r
+
+      \r
+
+      DECLARE \r
+
+      \    did employees.department_id%type;\r
+
+      \    eid employees.employee_id%type := 115;\r
+
+      \r
+
+      BEGIN \r
+
+      \    select department_id \r
+
+      \    into did\r
+
+      \    from employees\r
+
+      \    where employee_id = eid;\r
+
+      \    \r
+
+      \    if (did = 90) then \r
+
+      \        dbms_output.put_line('Administration.');\r
+
+      \    elsif (did = 60) then \r
+
+      \        dbms_output.put_line('Technical Services');\r
+
+      \    else \r
+
+      \        dbms_output.put_line('General Staff');\r
+
+      \    end if;\r
+
+      \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      --alternate approach \r
+
+      \r
+
+      declare \r
+
+      \    eid employees.employee_id%type := 115;\r
+
+      \    did employees.department_id%type;\r
+
+      \    v_label VARCHAR2(50);\r
+
+      \r
+
+      begin \r
+
+      \r
+
+      \    select department_id \r
+
+      \    into did\r
+
+      \    from employees\r
+
+      \    where employee_id = eid;\r
+
+      \    \r
+
+      \   v_label := case did \r
+
+      \                    when 90 then 'Administration'\r
+
+      \                    when 60 then 'Technical Services'\r
+
+      \                    else 'General Staff'\r
+
+      \                end;\r
+
+      \    \r
+
+      \    dbms_output.put_line('Employee '||eid || ' label is: ' || v_label);\r
+
+      \r
+
+      end;\r
+
+      /\r
+
+      \r
+
+      --Q5\r
+
+      declare \r
+
+      \r
+
+      \    did employees.department_id%type := 90;\r
+
+      \    bonus NUMBER;\r
+
+      \    bcom NUMBER;\r
+
+      \r
+
+      begin\r
+
+      \r
+
+      \    for c in(\r
+
+      \        select employee_id, salary, comission_pct\r
+
+      \        from employees\r
+
+      \        where department_id = did;\r
+
+      \    )\r
+
+      \    \r
+
+      \    loop \r
+
+      \    \r
+
+      \        if (c.comission_pct is not null) then\r
+
+      \            bcom := c.comission_pct;\r
+
+      \        else\r
+
+      \            bcom := 0;\r
+
+      \        end if;\r
+
+      \        \r
+
+      \        if (c.salary between 15000 and 20000) then \r
+
+      \            bonus := c.salary * bcom;\r
+
+      \            dbms_output.put_line('emp: ' || c.employee_is || ' standard
+      bonus: ' || bonus);\r
+
+      \        elsif (c.salary > 20000) then \r
+
+      \            bonus := c.salary * (c.comission_pct + 0.20)\r
+
+      \            dbms_output.put_line('Emp: ' || c.employee_id || 'Tiered
+      Bonus: ' || boonus);\r
+
+      \        end if;\r
+
+      \            \r
+
+      \    \r
+
+      \    end loop;\r
+
+      \    \r
+
+      end;\r
+
+      /\r
+
+      \r
+
+      \r
+
+      CREATE OR REPLACE TRIGGER t_b_i_emp\r
+
+      BEFORE INSERT ON employees\r
+
+      FOR EACH ROW \r
+
+      BEGIN \r
+
+      \    IF :NEW.Salary < 5000 THEN \r
+
+      \        RAISE_APPLICATION_ERROR(-20001, 'Salary must be atleast 5000');\r
+
+      \    END IF;\r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      CREATE OR REPLACE TRIGGER man_trg\r
+
+      BEFORE DELETE ON employees\r
+
+      FOR EACH ROW \r
+
+      ENABLE \r
+
+      BEGIN \r
+
+      \r
+
+      \    if :OLD.Job = 'Manager' THEN \r
+
+      \        RAISE_APPLICATION_ERROR(-20003, 'Managers cant be deleted')\r
+
+      \    end if;\r
+
+      \    \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      \r
+
+      CREATE OR REPLACE TRIGGER all_trg\r
+
+      BEFORE INSERT OR DELETE OR UPDATE ON employees\r
+
+      FOR EACH ROW \r
+
+      ENABLE \r
+
+      \r
+
+      DECLARE \r
+
+      \    v_user VARCHAR2(15);\r
+
+      \    \r
+
+      BEGIN \r
+
+      \    IF INSERTING THEN\r
+
+      \        DBMS_OUTPUT.PUT_LINE('A row was added by: ' || v_user);\r
+
+      \    ELSIF UPDATING THEN \r
+
+      \        DBMS_OUTPUT.PUT_LINE('One line updated by: ' || v_user);\r
+
+      \    ELSIF DELETING THEN \r
+
+      \        DBMS_OUTPUT.PUT_LINE('One line deleted by: ' || v_user);\r
+
+      \    END IF;    \r
+
+      \    \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      CREATE TABLE su_backup AS \r
+
+      SELECT * FROM su where 1=2;\r
+
+      \r
+
+      CREATE OR REPLACE TRIGGER trg_after_ddl\r
+
+      AFTER DDL ON DATABASE\r
+
+      BEGIN \r
+
+      \    \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r
+
+      \r\n"
+    languageId: oracle-sql

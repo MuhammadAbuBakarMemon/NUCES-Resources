@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CE3857C9-FD32-AC5F-1C61-FA3897BAD61F" name="Customers">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>202ED277-6A6B-889A-DD2A-C94501AF8FE6</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="customer_id" id="0EEF3630-EA6F-A03C-4FD3-1F25EC75463C">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>46D06709-EEF0-973A-5E6E-16F94ABC6138</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>86590D26-000F-8768-4321-3D5B63BAE708</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_name" id="7813C38F-4D6E-4987-824D-9A54D370BF83">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>7A80D39E-2349-B654-DA19-29324A086F58</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>732F6970-2CDF-ED31-11F5-9FD7ED711AB9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="D9F0B6D3-D0EF-4C50-7BE5-2D9FE20E75C5">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>CE5FD8A6-5301-80BB-0458-0856D66E8B76</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>732F6970-2CDF-ED31-11F5-9FD7ED711AB9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="F0AFA82E-050C-53DC-D9D9-7DC415DAB4E6">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>22E06156-CC01-3D35-6D14-C3B267234C03</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2473E7DB-F541-A927-FCA7-9A56FE78D921</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Restaurants_restaurant_id" id="6AADEF42-9710-0EDD-4D51-E4BDD333F820">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>6F51A476-74C7-63AE-0990-A5EFC3B5B21D</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>86590D26-000F-8768-4321-3D5B63BAE708</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D2A84FFD-9ED7-9859-1069-9B83BAAFE6DC" referredColumn="E973B394-F4CA-971B-DD06-9B4162C75940"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E797C7A-661D-7B0E-5D4D-5BF1A299EEC3" name="Customers_PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>0F8951FA-4B84-F1CA-85FA-4F4D58E07B85</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0EEF3630-EA6F-A03C-4FD3-1F25EC75463C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="199DC2D2-91E2-5FD4-6A20-8B2DA9A7B765" name="Customers_Restaurants_FK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>47050567-FC2D-0E40-219F-82317E61B553</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AADEF42-9710-0EDD-4D51-E4BDD333F820"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

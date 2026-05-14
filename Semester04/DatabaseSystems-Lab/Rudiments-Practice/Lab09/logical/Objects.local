@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="2237AB53-9F7D-0623-EE6E-AD9497F3B601" name="Books" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="C160C24E-E60A-135F-3F0C-E12A800A1824" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="6ECF5EAF-4167-F4BF-22FF-ED105F1B4E44" name="Patrons" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="C160C24E-E60A-135F-3F0C-E12A800A1824" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="2969C8EF-5F51-4744-68B7-22EC94307F2E" name="Transactions" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="C160C24E-E60A-135F-3F0C-E12A800A1824" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="956D56DB-C3C6-2217-EAAD-34CD7A5AA867" name="Books_To_Transactions" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="C160C24E-E60A-135F-3F0C-E12A800A1824" propertySourceId="2237AB53-9F7D-0623-EE6E-AD9497F3B601" propertyTargetId="2969C8EF-5F51-4744-68B7-22EC94307F2E"/>
+   <object objectType="Relation" objectID="D15B32AB-700C-1583-BE7A-AF1E40FCD26C" name="Patrons_To_Transactions" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="C160C24E-E60A-135F-3F0C-E12A800A1824" propertySourceId="6ECF5EAF-4167-F4BF-22FF-ED105F1B4E44" propertyTargetId="2969C8EF-5F51-4744-68B7-22EC94307F2E"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

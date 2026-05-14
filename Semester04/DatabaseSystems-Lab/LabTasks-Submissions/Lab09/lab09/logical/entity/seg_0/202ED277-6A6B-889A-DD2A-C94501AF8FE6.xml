@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="202ED277-6A6B-889A-DD2A-C94501AF8FE6" name="Customers">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:53:00 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="customer_id" id="46D06709-EEF0-973A-5E6E-16F94ABC6138">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:53:08 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>86590D26-000F-8768-4321-3D5B63BAE708</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="first_name" id="7A80D39E-2349-B654-DA19-29324A086F58">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:53:22 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>732F6970-2CDF-ED31-11F5-9FD7ED711AB9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="last_name" id="CE5FD8A6-5301-80BB-0458-0856D66E8B76">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:53:48 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>732F6970-2CDF-ED31-11F5-9FD7ED711AB9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="address" id="22E06156-CC01-3D35-6D14-C3B267234C03">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:54:04 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2473E7DB-F541-A927-FCA7-9A56FE78D921</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="restaurant_id" id="6F51A476-74C7-63AE-0990-A5EFC3B5B21D">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:02:44 UTC</createdTime>
+<generatorID>47050567-FC2D-0E40-219F-82317E61B553</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<referedAttribute>F7488C96-9D6D-A754-A2B7-6B2C4F857166</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>86590D26-000F-8768-4321-3D5B63BAE708</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0F8951FA-4B84-F1CA-85FA-4F4D58E07B85" name="Customers PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:53:19 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>46D06709-EEF0-973A-5E6E-16F94ABC6138</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

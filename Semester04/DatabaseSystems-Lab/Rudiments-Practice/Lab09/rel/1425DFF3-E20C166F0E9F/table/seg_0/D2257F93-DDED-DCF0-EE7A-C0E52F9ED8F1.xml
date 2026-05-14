@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D2257F93-DDED-DCF0-EE7A-C0E52F9ED8F1" name="Transactions">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>2969C8EF-5F51-4744-68B7-22EC94307F2E</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Transaction_ID" id="67A5E534-6D55-CBA2-1620-64B8EA5608AB">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>8B42314A-DF2A-8780-7269-B3F0171206FB</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transaction_Date" id="C3548338-7BEE-76B7-730B-910C1F054CBD">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>DD236E13-E646-F428-B706-EE64D4D04140</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transaction_Type" id="DAAEB79C-45D1-31E6-B499-79775AD6E566">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>7AF429C7-5BD7-63A4-869F-689FC9A29B70</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Books_Book_ID" id="38C20AC6-575A-9D77-330A-C6E2CFA75926">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>3F7C3049-BB5D-4201-A3B9-A8D3EC389EFD</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>962B0D21-05BB-8B82-69D8-7E3344D05BEF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F21FA01-239A-AC53-333F-34A80BF0DDAA" referredColumn="9BFDE0B0-5968-2595-EED1-26688FBDB87C"/>
+</associations>
+</Column>
+<Column name="Patrons_Patron_ID" id="CAA40FE6-F111-7F65-F772-E6ACC8AE16E8">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>50E12E5E-233B-C1E2-5BF1-3642EBFDEDB0</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="598C3E81-F6AB-A7C2-4B13-A3206B536E28" referredColumn="4DF0F53F-6730-0751-44FA-BECA0453AAC6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B11BA861-2B53-2032-4C6C-222AD252F5C7" name="Transactions_PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>235A979B-AB3D-A3B4-20C2-CD49E2A323A2</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67A5E534-6D55-CBA2-1620-64B8EA5608AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B011565D-37C4-D18F-496D-7990E8CBFA96" name="Transactions_Books_FK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>956D56DB-C3C6-2217-EAAD-34CD7A5AA867</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38C20AC6-575A-9D77-330A-C6E2CFA75926"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="22D718B8-6D07-C834-EA79-7A167E8881C5" name="Transactions_Patrons_FK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>D15B32AB-700C-1583-BE7A-AF1E40FCD26C</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAA40FE6-F111-7F65-F772-E6ACC8AE16E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

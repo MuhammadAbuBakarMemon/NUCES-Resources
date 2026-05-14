@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6ECF5EAF-4167-F4BF-22FF-ED105F1B4E44" name="Patrons">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:13:47 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Patron_ID" id="4A665A6A-DE30-DAF5-AF55-F2EE29A09E10">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:14:05 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_Name" id="88ECF400-2EC7-0125-9BCD-101BBCB8C065">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:14:06 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9673EF06-B584-0750-D16E-1E3A7A14A68C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First_Name" id="1BFA9102-2A6F-0B3B-2DE3-1197ED723BE1">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:14:56 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9673EF06-B584-0750-D16E-1E3A7A14A68C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Street_Address" id="39C898D3-C2F0-2EE4-31B5-319FB7EB1590">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:15:50 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2A789B8F-ABBC-7CCE-8A94-44042C98D256</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="City" id="A23D8ED4-7380-0714-B10F-35659A7BA51B">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:18:33 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D3D22926-EEDA-2899-C913-B7414ABBD262</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="State" id="E5B9D9E1-A135-9708-0F7D-E3188C80E38D">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:18:52 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>E0CC12EF-9FE7-A72A-2EAC-9E10AEF8EA7F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Zip" id="B0399314-5351-CEB9-E0BC-D05251EE4470">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:19:18 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0099B679-63A2-B907-8077-F3CFD8B8E66B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Location" id="9A318470-ED37-BE0E-907C-F20BE7E7C84E">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:19:45 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>3</use>
+<structuredType>47E390DE-0671-C4B1-8428-0F45CBEE18F8</structuredType>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="97F8F6F5-D4FE-B65A-B8D9-602EC9AA853E" name="Patrons PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:14:21 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4A665A6A-DE30-DAF5-AF55-F2EE29A09E10</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

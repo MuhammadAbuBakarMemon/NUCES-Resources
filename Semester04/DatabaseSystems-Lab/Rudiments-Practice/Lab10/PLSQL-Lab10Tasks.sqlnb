@@ -1,0 +1,571 @@
+cells:
+  - kind: 1
+    value: "Q1 \r
+
+      1. The HR department wants to automate employee allowance calculations.
+      Create a\r
+
+      program that takes an employee’s base salary of $250, calculates a 15%
+      special\r
+
+      allowance, and displays both the allowance amount and the final total
+      salary to the user.\r\n"
+    languageId: markdown
+  - kind: 2
+    value: "SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \    v_base_salary HR.Employees.Salary%type := 250;\r
+
+      \    v_sp_allowance_amt HR.Employees.Salary%type;\r
+
+      \    v_f_tot_sal HR.Employees.Salary%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    v_sp_allowance_amt := v_base_salary * 0.15;\r
+
+      \    v_f_tot_sal := v_base_salary + v_sp_allowance_amt;\r
+
+      \r
+
+      \    DBMS_OUTPUT.PUT_LINE('Base Sal: $' || v_base_salary);\r
+
+      \    DBMS_OUTPUT.PUT_LINE('Special Allowance (15%): $' ||
+      v_sp_allowance_amt);\r
+
+      \    DBMS_OUTPUT.PUT_LINE('Final Salary: $' || v_f_tot_sal);\r
+
+      \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      -- use single quotes for text literals \r
+
+      -- double quotes are reserved for database object identifiers like (column
+      or table names)"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q2\r
+
+      2. The HR department needs to verify the details of a specific employee.
+      Construct a script\r
+
+      that retrieves the first name and the monthly salary of the employee
+      assigned to ID 105\r
+
+      from the employees table and prints these details on the screen."
+    languageId: markdown
+  - kind: 2
+    value: "SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \    v_fn HR.employees.first_name%type;\r
+
+      \    v_sal HR.employees.salary%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    SELECT first_name, salary \r
+
+      \    into v_fn, v_sal \r
+
+      \    from HR.employees\r
+
+      \    where employee_id = 105;\r
+
+      \r
+
+      \    dbms_output.put_line('Employee First Name: ' || v_fn);\r
+
+      \    dbms_output.put_line('Employee Salary: ' || v_sal);\r
+
+      \r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q3 \r
+
+      3. The company is reviewing employee salaries. For an employee with ID
+      110, check their\r
+
+      current salary; if it is less than $8,000, increase it by $1,200. For
+      anyone else, apply a\r
+
+      standard raise of $400, and ensure the employee record is updated
+      accordingly."
+    languageId: markdown
+  - kind: 2
+    value: "SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE\r
+
+      \    eid Number := 110;\r
+
+      \    v_sal HR.employees.salary%type;\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select salary \r
+
+      \    into v_sal\r
+
+      \    from hr.employees\r
+
+      \    where employee_id = eid;\r
+
+      \r
+
+      \    if (v_sal < 8000) then \r
+
+      \        v_sal := v_sal + 1200;\r
+
+      \        dbms_output.put_line('Salary was <$8000, Increased by $1200.');\r
+
+      \    else \r
+
+      \        v_sal := v_sal + 400;\r
+
+      \        dbms_output.put_line('Standardized raise applied. Increased by
+      $400.');\r
+
+      \    end if;\r
+
+      \r
+
+      \    update hr.employees \r
+
+      \    set salary = v_sal \r
+
+      \    where employee_id = eid;\r
+
+      \r
+
+      \    COMMIT;\r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q4\r
+
+      4. Management requires a tool to label employees based on their department
+      IDs. For\r
+
+      department ID 90, the output should be &quot;Administration&quot;; for
+      department ID 60, it should\r
+
+      be &quot;Technical Services&quot;; and for any other department, it should
+      show &quot;General Staff.&quot;\r
+
+      Run this check for employee 115."
+    languageId: markdown
+  - kind: 2
+    value: "SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \    eid NUmber := 115;\r
+
+      \    did HR.EMPLOYEES.DEPARTMENT_ID%TYPE;\r
+
+      \    v_label VARCHAR2(50);\r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    select department_id \r
+
+      \    into did\r
+
+      \    from hr.employees\r
+
+      \    where employee_id = eid;\r
+
+      \r
+
+      \    v_label := CASE did\r
+
+      \        WHEN 90 then 'Administration'\r
+
+      \        WHEN 60 then 'Technical Services'\r
+
+      \        ELSE 'General Staff'\r
+
+      \    END;\r
+
+      \r
+
+      \    dbms_output.put_line('Employee ID: ' || eid || ' labelled as: ' ||
+      v_label);\r
+
+      \r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q5\r
+
+      5. A special incentive is being offered to employees in the Executive
+      department\r
+
+      (Department ID 90). If an employee’s salary is between $15,000 and
+      $20,000, calculate a\r
+
+      bonus based on their commission percentage. If they earn more than
+      $20,000, apply a\r
+
+      higher tiered bonus calculation. Write the logic to handle this
+      processing."
+    languageId: markdown
+  - kind: 2
+    value: "SET SERVEROUTPUT ON;\r
+
+      \r
+
+      DECLARE \r
+
+      \    v_did NUMBER := 90;\r
+
+      \    v_bonus NUMBER(10, 2); \r
+
+      \r
+
+      BEGIN \r
+
+      \r
+
+      \    dbms_output.put_line('Bonus Report for Department ID: 90.');\r
+
+      \r
+
+      \    FOR emp IN (\r
+
+      \        SELECT first_name, last_name, salary, NVL(commission_pct, 0) AS
+      c_pct\r
+
+      \        from hr.EMPLOYEES\r
+
+      \        where department_id = v_did\r
+
+      \r
+
+      \    ) LOOP\r
+
+      \r
+
+      \        v_bonus := 0.00;\r
+
+      \r
+
+      \        if (emp.salary BETWEEN 15000 AND 20000) THEN \r
+
+      \            v_bonus := (emp.salary * emp.c_pct);\r
+
+      \            dbms_output.put_line(emp.first_name || ' ' || emp.last_name
+      || ' | Base: $' || emp.salary || ' | Standard: $' || v_bonus);\r
+
+      \r
+
+      \        elsif (emp.salary > 20000) THEN \r
+
+      \            v_bonus := (emp.salary * (emp.c_pct + 0.25));\r
+
+      \            dbms_output.put_line(emp.first_name || ' ' || emp.last_name
+      || ' | Base: $' || emp.salary || ' | Standard: $' || v_bonus);\r
+
+      \r
+
+      \        ELSE\r
+
+      \            dbms_output.put_line(emp.first_name || ' ' || emp.last_name
+      || ' | Base: $' || emp.salary || 'No Bonus Applicable.');\r
+
+      \r
+
+      \        end if;\r
+
+      \r
+
+      \    end loop;\r
+
+      \r
+
+      EXCEPTION \r
+
+      \    WHEN NO_DATA_FOUND THEN \r
+
+      \        DBMS_OUTPUT.PUT_LINE('No employee is in the department ID:
+      90.');\r
+
+      \r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q6\r
+
+      6. The Shipping department (Department ID 50) needs a complete employee
+      list. Design a\r
+
+      solution that goes through every employee record belonging to this
+      department and prints\r
+
+      each employee’s name and current salary one by one."
+    languageId: markdown
+  - kind: 2
+    value: "BEGIN\r
+
+      \    DBMS_OUTPUT.PUT_LINE('--- Shipping Department Employees ---');\r
+
+      \    FOR emp_rec IN (\r
+
+      \        SELECT first_name, last_name, salary \r
+
+      \        FROM hr.employees \r
+
+      \        WHERE department_id = 50\r
+
+      \    ) \r
+
+      \    LOOP\r
+
+      \        DBMS_OUTPUT.PUT_LINE('Name: ' || emp_rec.first_name || ' ' ||
+      emp_rec.last_name || ' | Salary: $' || emp_rec.salary);\r
+
+      \    END LOOP;\r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q7\r
+
+      7. Develop a procedure in the HR database where the user provides an
+      employee ID. Upon\r
+
+      receiving this ID, the procedure should find and display that employee’s
+      current salary\r
+
+      from the employees table."
+    languageId: markdown
+  - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
+    value: "SET SERVEROUTPUT ON;\r
+
+      \r
+
+      CREATE OR REPLACE PROCEDURE display_emp_salary (\r
+
+      \    p_emp_id IN NUMBER\r
+
+      ) IS\r
+
+      \    v_salary hr.employees.salary%TYPE;\r
+
+      \r
+
+      BEGIN\r
+
+      \    SELECT salary INTO v_salary \r
+
+      \    FROM hr.employees \r
+
+      \    WHERE employee_id = p_emp_id;\r
+
+      \    \r
+
+      \    DBMS_OUTPUT.PUT_LINE('The current salary for employee ID ' ||
+      p_emp_id || ' is $' || v_salary);\r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      EXEC display_emp_salary(105);"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q8\r
+
+      8. Build a program where you provide an employee ID, and the system
+      identifies their\r
+
+      department ID. This department ID must then be passed back to the main
+      calling block\r
+
+      using an OUT parameter so it can be used for further reporting or
+      display.\r\n"
+    languageId: markdown
+  - kind: 2
+    value: "CREATE OR REPLACE PROCEDURE display_emp_salary (\r
+
+      \    p_emp_id IN NUMBER\r
+
+      ) IS\r
+
+      \    v_salary employees.salary%TYPE;\r
+
+      BEGIN\r
+
+      \    SELECT salary INTO v_salary \r
+
+      \    FROM employees \r
+
+      \    WHERE employee_id = p_emp_id;\r
+
+      \    \r
+
+      \    DBMS_OUTPUT.PUT_LINE('The current salary for employee ID ' ||
+      p_emp_id || ' is $' || v_salary);\r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      EXEC display_emp_salary(105);"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q9\r
+
+      9. Create a procedure that takes a specific numeric value, increases it by
+      exactly 25% using\r
+
+      an IN OUT parameter, and then makes that updated figure available for the
+      next part of\r
+
+      the program to use."
+    languageId: markdown
+  - kind: 2
+    value: "CREATE OR REPLACE PROCEDURE increase_by_25_percent (\r
+
+      \    p_value IN OUT NUMBER\r
+
+      ) IS\r
+
+      BEGIN\r
+
+      \    p_value := p_value * 1.25; \r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      DECLARE\r
+
+      \    v_my_number NUMBER := 200;\r
+
+      BEGIN\r
+
+      \    DBMS_OUTPUT.PUT_LINE('Original Value: ' || v_my_number);\r
+
+      \    increase_by_25_percent(v_my_number);\r
+
+      \    DBMS_OUTPUT.PUT_LINE('Updated Value (After Procedure): ' ||
+      v_my_number);\r
+
+      END;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "Q10\r
+
+      10. The HR department needs a streamlined way to add new office locations.
+      Design a\r
+
+      solution that takes a street address and city, automatically determines
+      the next available\r
+
+      location ID by counting existing entries in the locations table, and
+      stores the complete\r
+
+      new location details into the system."
+    languageId: markdown
+  - kind: 2
+    value: "CREATE OR REPLACE PROCEDURE add_new_location (\r
+
+      \    p_street_address IN VARCHAR2,\r
+
+      \    p_city IN VARCHAR2\r
+
+      ) IS\r
+
+      \    v_next_loc_id locations.location_id%TYPE;\r
+
+      BEGIN\r
+
+      \    SELECT NVL(MAX(location_id), 0) + 100 \r
+
+      \    INTO v_next_loc_id \r
+
+      \    FROM locations;\r
+
+      \r
+
+      \    INSERT INTO locations (location_id, street_address, city)\r
+
+      \    VALUES (v_next_loc_id, p_street_address, p_city);\r
+
+      \r
+
+      \    DBMS_OUTPUT.PUT_LINE('Success: New location added in ' || p_city || '
+      with Location ID: ' || v_next_loc_id);\r
+
+      \r
+
+      \    COMMIT;\r
+
+      END;\r
+
+      /\r
+
+      \r
+
+      EXEC add_new_location('123 Sunset Boulevard', 'Karachi');"
+    languageId: oracle-sql

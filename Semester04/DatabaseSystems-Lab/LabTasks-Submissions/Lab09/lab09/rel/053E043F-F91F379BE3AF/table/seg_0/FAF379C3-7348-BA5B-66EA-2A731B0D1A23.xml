@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FAF379C3-7348-BA5B-66EA-2A731B0D1A23" name="Orders">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>CEBF0958-32B1-53E0-D95B-80702FDAF1CC</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="order_id" id="C4B65670-766E-D8F8-3322-0507AA1F32C3">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>56F5D004-E3B3-16A6-DF37-26582FF57A6A</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_date" id="D15CB82D-596D-DD30-F81D-2CD04A97E2CE">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>75A67111-546B-917E-582C-D7D0640B51D2</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_status" id="E59E0384-219D-D487-A0E0-9CBD1D257B53">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>8B73D49B-EDAE-D5FB-E678-BB3EA189CCD1</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Restaurants_restaurant_id" id="AB2196D3-815A-4173-15AA-E44BFD7DD944">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>02D32BA3-8019-1CCD-1F1B-702F4D642268</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>86590D26-000F-8768-4321-3D5B63BAE708</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2D2B865E-3A44-C30B-60BB-FB438C79AA5D" referredColumn="E973B394-F4CA-971B-DD06-9B4162C75940"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="120106E5-1BF2-CE90-DB7D-72DEF8F8A376" name="Orders_PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>663FA6F9-3347-B17D-4EA0-8DFA2774254C</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4B65670-766E-D8F8-3322-0507AA1F32C3"/>
+<colUsage columnID="AB2196D3-815A-4173-15AA-E44BFD7DD944"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AF85217-24D9-37BA-F84F-961453FCD4FA" name="Orders_Restaurants_FK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>4FDC624B-5770-9F49-82E2-211D2223F584</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB2196D3-815A-4173-15AA-E44BFD7DD944"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

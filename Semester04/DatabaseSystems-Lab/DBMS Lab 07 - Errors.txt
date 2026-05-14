@@ -1,0 +1,19 @@
+DBMS Lab 07
+
+Lab Manual Errors
+
+ERROR 1
+
+page - 4
+Question: Display employee details with department name using NATURAL JOIN.
+Query:
+SELECT FIRST_NAME, LAST_NAME, DEPARTMENT_NAME
+FROM EMPLOYEES
+NATURAL JOIN DEPARTMENTS;
+Output Explanation:
+Oracle automatically joins on DEPARTMENT_ID because it exists in both tables.
+
+CORRECT EXPLANATION:
+JOINS ON MANAGER_ID as well
+
+

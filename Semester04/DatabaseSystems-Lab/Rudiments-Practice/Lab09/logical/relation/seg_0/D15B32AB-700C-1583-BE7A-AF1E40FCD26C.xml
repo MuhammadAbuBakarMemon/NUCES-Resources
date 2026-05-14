@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Patrons_To_Transactions" directorySegmentName="seg_0" id="D15B32AB-700C-1583-BE7A-AF1E40FCD26C">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:38:47 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<sourcePk>97F8F6F5-D4FE-B65A-B8D9-602EC9AA853E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6ECF5EAF-4167-F4BF-22FF-ED105F1B4E44</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2969C8EF-5F51-4744-68B7-22EC94307F2E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

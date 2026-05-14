@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2969C8EF-5F51-4744-68B7-22EC94307F2E" name="Transactions">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:31:36 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Transaction_ID" id="8B42314A-DF2A-8780-7269-B3F0171206FB">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:31:59 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Transaction_Date" id="DD236E13-E646-F428-B706-EE64D4D04140">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:32:22 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Transaction_Type" id="7AF429C7-5BD7-63A4-869F-689FC9A29B70">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:33:11 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Book_ID" id="3F7C3049-BB5D-4201-A3B9-A8D3EC389EFD">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:37:53 UTC</createdTime>
+<generatorID>956D56DB-C3C6-2217-EAAD-34CD7A5AA867</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<referedAttribute>BF2F85CC-1FC1-CFA8-57A3-0D13AADE5117</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>962B0D21-05BB-8B82-69D8-7E3344D05BEF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Patron_ID" id="50E12E5E-233B-C1E2-5BF1-3642EBFDEDB0">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:38:47 UTC</createdTime>
+<generatorID>D15B32AB-700C-1583-BE7A-AF1E40FCD26C</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<referedAttribute>4A665A6A-DE30-DAF5-AF55-F2EE29A09E10</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="235A979B-AB3D-A3B4-20C2-CD49E2A323A2" name="Transactions PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 13:32:14 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<engineerTo>
+<item key="1425DFF3-2965-4193-BA6C-E20C166F0E9F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8B42314A-DF2A-8780-7269-B3F0171206FB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

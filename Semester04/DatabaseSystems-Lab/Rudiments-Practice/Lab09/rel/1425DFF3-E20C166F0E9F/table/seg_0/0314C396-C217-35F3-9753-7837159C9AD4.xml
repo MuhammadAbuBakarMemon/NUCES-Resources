@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0314C396-C217-35F3-9753-7837159C9AD4" name="Patrons">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>6ECF5EAF-4167-F4BF-22FF-ED105F1B4E44</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Patron_ID" id="4DF0F53F-6730-0751-44FA-BECA0453AAC6">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>4A665A6A-DE30-DAF5-AF55-F2EE29A09E10</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>3133003A-7E91-1047-6F4E-AE7021928124</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Last_Name" id="60362D3C-8E27-EAC5-D66F-5D4F20EB68DC">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>88ECF400-2EC7-0125-9BCD-101BBCB8C065</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9673EF06-B584-0750-D16E-1E3A7A14A68C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="First_Name" id="0D0BBBA9-AEB8-9ECA-3C45-2ED15B803914">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>1BFA9102-2A6F-0B3B-2DE3-1197ED723BE1</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9673EF06-B584-0750-D16E-1E3A7A14A68C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Street_Address" id="C5E51B1C-DDD4-E808-18F1-65D4480CDE58">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>39C898D3-C2F0-2EE4-31B5-319FB7EB1590</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2A789B8F-ABBC-7CCE-8A94-44042C98D256</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City" id="D9849942-80F9-C67F-1FA4-015A84EF12F0">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>A23D8ED4-7380-0714-B10F-35659A7BA51B</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D3D22926-EEDA-2899-C913-B7414ABBD262</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="State" id="85265D74-874C-FA25-4076-DA7754BDD1CA">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>E5B9D9E1-A135-9708-0F7D-E3188C80E38D</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>E0CC12EF-9FE7-A72A-2EAC-9E10AEF8EA7F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zip" id="37A1C238-5605-BDC2-1CCE-ADCB26D05D38">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>B0399314-5351-CEB9-E0BC-D05251EE4470</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0099B679-63A2-B907-8077-F3CFD8B8E66B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Location" id="B5D19736-D34D-4D2D-8FA6-43D0E809E89A">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>9A318470-ED37-BE0E-907C-F20BE7E7C84E</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>3</use>
+<structuredType>47E390DE-0671-C4B1-8428-0F45CBEE18F8</structuredType>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F63D2C0D-671B-7E6E-8AC1-B36EA3319BBE" name="Patrons_PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<generatorID>97F8F6F5-D4FE-B65A-B8D9-602EC9AA853E</generatorID>
+<ownerDesignName>Lab09</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DF0F53F-6730-0751-44FA-BECA0453AAC6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

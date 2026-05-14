@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CEBF0958-32B1-53E0-D95B-80702FDAF1CC" name="Orders">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:54:31 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="order_id" id="56F5D004-E3B3-16A6-DF37-26582FF57A6A">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:54:47 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_date" id="75A67111-546B-917E-582C-D7D0640B51D2">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:54:55 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_status" id="8B73D49B-EDAE-D5FB-E678-BB3EA189CCD1">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:55:38 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="restaurant_id" id="02D32BA3-8019-1CCD-1F1B-702F4D642268">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:02:19 UTC</createdTime>
+<generatorID>4FDC624B-5770-9F49-82E2-211D2223F584</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<referedAttribute>F7488C96-9D6D-A754-A2B7-6B2C4F857166</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>86590D26-000F-8768-4321-3D5B63BAE708</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="663FA6F9-3347-B17D-4EA0-8DFA2774254C" name="Orders PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 16:54:53 UTC</createdTime>
+<ownerDesignName>lab09</ownerDesignName>
+<engineerTo>
+<item key="053E043F-19D2-DC3E-A01C-F91F379BE3AF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>56F5D004-E3B3-16A6-DF37-26582FF57A6A</attributeRef>
+<attributeRef>02D32BA3-8019-1CCD-1F1B-702F4D642268</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

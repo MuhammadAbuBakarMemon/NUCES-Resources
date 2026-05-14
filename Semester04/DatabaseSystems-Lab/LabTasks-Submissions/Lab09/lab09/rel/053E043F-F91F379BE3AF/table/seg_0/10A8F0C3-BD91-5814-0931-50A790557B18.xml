@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="10A8F0C3-BD91-5814-0931-50A790557B18" name="Restaurants">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>9D3B50DB-9962-1157-A773-618E7F7F5C08</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="restaurant_id" id="E973B394-F4CA-971B-DD06-9B4162C75940">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>F7488C96-9D6D-A754-A2B7-6B2C4F857166</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>86590D26-000F-8768-4321-3D5B63BAE708</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="CFA31E9B-421B-FAAE-642E-610FA7923B54">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>75264289-250D-F0C2-0D57-5DB4982A930E</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>732F6970-2CDF-ED31-11F5-9FD7ED711AB9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="location" id="8B15617F-A32D-1F2D-9812-5EF72DF48CFA">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>7B9BF7D5-FD12-986C-EAAC-9425F26E6612</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>2473E7DB-F541-A927-FCA7-9A56FE78D921</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rating" id="4A64AF77-C68D-F90A-5786-11C2E64FFD28">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>7514A3C8-1098-79D4-6881-7E8030EBCD1E</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>CB40555B-9FDA-6348-C320-8AEC4B3BD5FA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7024F7F2-894E-5381-2D56-10EA78BC4183" name="Restaurants_PK">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-13 17:11:02 UTC</createdTime>
+<generatorID>A577B064-5CF4-B6B8-2467-94B40AFE9B23</generatorID>
+<ownerDesignName>lab09</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E973B394-F4CA-971B-DD06-9B4162C75940"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

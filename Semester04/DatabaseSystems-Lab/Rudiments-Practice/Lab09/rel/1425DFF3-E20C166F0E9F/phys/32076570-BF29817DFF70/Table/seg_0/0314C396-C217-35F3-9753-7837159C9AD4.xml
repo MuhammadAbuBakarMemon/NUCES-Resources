@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Patrons" directorySegmentName="seg_0" id="0314C396-C217-35F3-9753-7837159C9AD4">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="First_Name" id="0D0BBBA9-AEB8-9ECA-3C45-2ED15B803914">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Zip" id="37A1C238-5605-BDC2-1CCE-ADCB26D05D38">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Patron_ID" id="4DF0F53F-6730-0751-44FA-BECA0453AAC6">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Last_Name" id="60362D3C-8E27-EAC5-D66F-5D4F20EB68DC">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="State" id="85265D74-874C-FA25-4076-DA7754BDD1CA">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Location" id="B5D19736-D34D-4D2D-8FA6-43D0E809E89A">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Street_Address" id="C5E51B1C-DDD4-E808-18F1-65D4480CDE58">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="City" id="D9849942-80F9-C67F-1FA4-015A84EF12F0">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Patrons_PK" id="F63D2C0D-671B-7E6E-8AC1-B36EA3319BBE">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="Books" directorySegmentName="seg_0" id="42AC4D24-844E-A2BC-A224-4710AFA3FF30">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="Title" id="3DC36624-6FE6-74DE-253D-9CC2C5113B4D">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Rating" id="935423F6-0EBB-EE18-28CC-8A2190305CCB">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Book_ID" id="9BFDE0B0-5968-2595-EED1-26688FBDB87C">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Author_Last_Name" id="F39785D3-654F-83CF-9422-739F228FFEFF">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Author_First_Name" id="FA04FDDE-F87E-F9EB-9076-8B6FA4116AC8">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Books_PK" id="5FD6E167-4C3B-56B0-D7C7-9006EA603954">
+<createdBy>Muhammad Abu Bakar</createdBy>
+<createdTime>2026-05-01 14:09:31 UTC</createdTime>
+<ownerDesignName>Lab09</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>
